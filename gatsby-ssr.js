@@ -4,4 +4,29 @@
  * See: https://www.gatsbyjs.org/docs/ssr-apis/
  */
 
-// You can delete this file if you're not using it
+/* 
+  getHeadComponents: [Function: getHeadComponents],
+  replaceHeadComponents: [Function: replaceHeadComponents],
+  getPreBodyComponents: [Function: getPreBodyComponents],
+  replacePreBodyComponents: [Function: replacePreBodyComponents],
+  getPostBodyComponents: [Function: getPostBodyComponents],
+  replacePostBodyComponents: [Function: replacePostBodyComponents],
+  pathname: '/404.html',
+  pathPrefix: ''
+*/
+exports.onPreRenderHTML = ({ getHeadComponents, replaceHeadComponents, replacePostBodyComponents }) => {
+  /* Remove added tags */
+  const headComponents = getHeadComponents()
+    .filter((component) => {
+      if (/^gatsby-plugin-manifest-apple-touch-icon/.test(component.key)) {
+        return true;
+      }
+      if(['meta', 'style', 'title'].indexOf(component.type) > -1) {
+        return true;
+      }
+      return false;
+    })
+
+  replaceHeadComponents(headComponents);
+  replacePostBodyComponents([]);
+}

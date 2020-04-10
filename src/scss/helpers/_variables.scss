@@ -1,0 +1,76 @@
+
+/*
+ * Theme Colors
+ */
+
+$black: #000;
+$white: #fff;
+$success: #50E3C2;
+$warning: #F45165;
+$gray-lightest: #e9e9e9;
+$gray-lighter: #cccccc;
+$gray-light: #aaaaaa;
+$gray-medium: #7a7a7a;
+$gray-dark: #383232;
+// $gray-dark: #4A4A4A;
+$gray-darker: #222;
+$page-background-color: #f7f5f0;
+
+/*
+ * Settings
+ */
+$transition-speed-fast: 100ms;
+$transition-speed-normal: 300ms;
+$transition-speed-slow: 500ms;
+
+
+/*
+ * Grid
+ */
+$tablet-small-width: 640px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+$spacer-mobile-small: 5px;
+$spacer-mobile: 10px;
+$spacer-mobile-large: 20px;
+$spacer-mobile-huge: 40px;
+
+$spacer-tablet-small: 8px;
+$spacer-tablet: 15px;
+$spacer-tablet-large: 30px;
+$spacer-tablet-huge: 60px;
+
+
+/*
+ * Typography
+ */
+
+$font-family-sans-serif: 'Lato', Helvetica, Arial, sans-serif;
+$font-family-serif: 'Georgia', serif;
+// $font-family-fancy: 'Lato';
+$font-family-fancy: 'EB Garamond';
+$font-family-base: $font-family-sans-serif;
+$font-color-base: $gray-dark;
+
+$font-light: 300;
+$font-normal: 400;
+$font-medium: 500;
+$font-bold: 700;
+
+$font-size-smallest: 11px;
+$font-size-smaller: 13px;
+$font-size-small: 14px;
+$font-size-base: 16px;
+$font-size-large: 18px;
+$font-size-larger: 24px;
+$font-size-largest: 36px;
+
+$font-size-tablet-small: 16px;
+$font-size-tablet-base: 18px;
+$font-size-tablet-large: 20px;
+$font-size-tablet-larger: 26px;
+
+
+$line-height-base: 1.6;
+$line-height-heading: 1.1;
