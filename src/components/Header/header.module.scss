@@ -1,0 +1,32 @@
+@import "../../scss/helpers/variables";
+@import "../../scss/helpers/mixins";
+
+$mobile-height: 44px;
+$tablet-height: 80px;
+
+.root {
+  display: flex;
+  padding: 20px 0;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  position:relative;
+  line-height: 1;
+  height: $mobile-height;
+  color: $gray-dark;
+  background-color: transparent;
+  border-radius: 5px;
+  margin: 0 10px;
+  transition: all $transition-speed-slow ease-in-out;
+
+  &:hover {
+    background-color: $gray-dark;
+    color: $white;
+  }  
+  
+  @include media-tablet{
+    height: $tablet-height;
+  }  
+}

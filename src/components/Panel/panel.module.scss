@@ -1,0 +1,29 @@
+@import "../../scss/helpers/variables";
+@import "../../scss/helpers/mixins";
+
+.panel {
+  position: relative;
+
+  &:first-child {
+    min-height: 100%;
+  }
+}
+
+.panel-heading {
+  padding-bottom: $spacer-mobile-large;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  margin: $spacer-mobile-huge 0 $spacer-mobile-large;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  @include media-tablet{
+    .panel-heading{
+      padding-bottom: $spacer-tablet-large;
+      margin: $spacer-tablet-huge 0 $spacer-tablet-large;
+    }
+  }  
+}
+

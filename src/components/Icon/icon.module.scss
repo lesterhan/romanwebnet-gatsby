@@ -1,0 +1,16 @@
+@import "../../scss/helpers/variables";
+@import "../../scss/helpers/mixins";
+
+.root {
+  height: 100%;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.defaultSize {
+  height: 38px;
+
+  @include media-tablet {
+    height: 72px;
+  }  
+}
