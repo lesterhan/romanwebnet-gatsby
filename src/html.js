@@ -2,7 +2,6 @@ import React from "react"
 import PropTypes from "prop-types"
 
 export default function HTML(props) {
-  console.log(props.postBodyComponents);
   return (
     <html {...props.htmlAttributes}>
       <head>
