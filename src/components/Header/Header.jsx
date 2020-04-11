@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './header.module.scss';
 import Icon from '../Icon';
+import Container from '../Container';
 
 const links = [
   {
@@ -62,14 +63,14 @@ const HeaderLink = ({ root, icon }) => (
 );
 
 const Header = () => (
-  <header>
-    <nav className={`${styles.root} container`}>
+  <header className={styles.root}>
+    <Container element="nav" className={`${styles.nav}`} padded={false}>
       {
-        links.map(link => 
-          <HeaderLink {...link} />
+        links.map((link, key) => 
+          <HeaderLink {...link} key={key} />
         )
       }
-    </nav>
+    </Container>
   </header>
 );
 

@@ -1,14 +1,6 @@
 @import "../../scss/helpers/variables";
 @import "../../scss/helpers/mixins";
 
-.panel {
-  position: relative;
-
-  &:first-child {
-    min-height: 100%;
-  }
-}
-
 .panel-heading {
   padding-bottom: $spacer-mobile-large;
   border-bottom-style: solid;

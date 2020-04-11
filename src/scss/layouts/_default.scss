@@ -16,21 +16,9 @@ body{
   height:100%;
 }
 
-
 #___gatsby,
 #gatsby-focus-wrapper {
   height:100%;
-}
-
-img{
-  max-width:100%;
-}
-
-.container {
-  max-width: 100%;;
-  padding: $spacer-mobile-huge $spacer-mobile-large;
-  margin-right: auto;
-  margin-left: auto;
 }
 
 .flex-columns {
@@ -102,19 +90,8 @@ img{
 
 
 
-@include media-tablet-small {
-
-  .container{
-    max-width: $tablet-small-width;
-  }
-}
 
 @include media-tablet {
-
-  .container {
-    max-width: $tablet-width;
-    padding: $spacer-tablet-huge $spacer-tablet-large;
-  }
 
   .flex-columns {
     display: flex;
@@ -159,12 +136,5 @@ img{
     .list-item-right {
       margin: 0;
     }
-  }
-}
-
-@include media-desktop {
-
-  .container{
-    max-width: $desktop-width;
   }
 }

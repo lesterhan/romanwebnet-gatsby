@@ -1,0 +1,12 @@
+@import "../../scss/helpers/variables";
+@import "../../scss/helpers/mixins";
+
+.footer {
+  text-align: center;
+  color: $white;
+}
+
+.anchor {
+  margin-top: 4px;
+  display: block;
+}

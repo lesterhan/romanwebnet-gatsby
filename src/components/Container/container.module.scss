@@ -1,0 +1,28 @@
+@import "../../scss/helpers/variables";
+@import "../../scss/helpers/mixins";
+
+.root {
+  max-width: 100%;;
+  margin-right: auto;
+  margin-left: auto;
+  
+  @include media-tablet-small {
+    max-width: $tablet-small-width;
+  }
+  
+  @include media-tablet {
+    max-width: $tablet-width;
+  }
+  
+  @include media-desktop {
+    max-width: $desktop-width;
+  }  
+}
+
+.padded {
+  padding: $spacer-mobile-huge $spacer-mobile-large;
+  
+  @include media-tablet {
+    padding: $spacer-tablet-huge $spacer-tablet-large;
+  }  
+}

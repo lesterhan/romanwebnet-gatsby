@@ -9,7 +9,7 @@ const themes = {
 };
 
 const Panel = ({ children, theme = 'none' }) => (
-  <section className={ `${styles.panel} ${themes[theme]}`}>
+  <section className={ `${styles.root} ${themes[theme]}`}>
      {children} 
   </section>
 );
