@@ -1,0 +1,26 @@
+@import "../../scss/helpers/variables";
+@import "../../scss/helpers/mixins";
+
+.root {
+  padding-bottom: $spacer-mobile-large;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  margin: $spacer-mobile-huge 0 $spacer-mobile-large;
+
+  &:first-child {
+    margin-top: 0;
+  }
+  
+  @include media-tablet{
+    padding-bottom: $spacer-tablet-large;
+    margin: $spacer-tablet-huge 0 $spacer-tablet-large;
+  }
+}
+
+.dark {
+  border-bottom-color: $gray-dark;
+}
+
+.light {
+  border-bottom-color: $gray-lightest;
+}

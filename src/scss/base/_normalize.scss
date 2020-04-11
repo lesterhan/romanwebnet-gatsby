@@ -417,3 +417,28 @@ textarea {
   -webkit-appearance: button; /* 1 */
   font: inherit; /* 2 */
 }
+
+/* Custom normalize for romanwebnet.com */
+
+*,
+:after,
+:before{
+  box-sizing:border-box;
+}
+
+html,
+body{
+  height:100%;
+  background-color: $page-background-color;
+}
+
+body{
+  min-height: 100%;
+  padding-bottom:0;
+  height:100%;
+}
+
+#___gatsby,
+#gatsby-focus-wrapper {
+  height:100%;
+}

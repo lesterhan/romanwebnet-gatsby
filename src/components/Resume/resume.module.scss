@@ -1,0 +1,56 @@
+@import "../../scss/helpers/variables";
+@import "../../scss/helpers/mixins";
+@import "../../scss/helpers/util";
+
+.bio {
+  margin-bottom: 0;
+
+  a {
+    font-weight: $font-bold;
+  }
+
+  @include media-tablet {
+    .bio {
+      font-size: $font-size-tablet-large;
+    }
+  }
+}
+
+.skills {
+
+  .column {
+    @extend .clearfix;
+  }
+
+  li {
+    float: left;
+    margin-right: 5px;
+
+    &:after {
+      content: ', ';
+    }
+
+    &:last-child:after {
+      content: '';
+    }
+  }
+
+  @include media-tablet {
+
+    li {
+      float: none;
+      margin-right: 0;
+
+      &:after {
+        content: '';
+      }
+    }
+  }
+}
+
+.experience {
+
+  h5 {
+    margin-bottom: $spacer-mobile;
+  }
+}
