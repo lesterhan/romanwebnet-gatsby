@@ -65,17 +65,17 @@ const Resume = () => (
             <h4>Anheuser-Busch InBev - New York, NY</h4>
             <h5>Fullstack Tech Lead</h5>
             <p>
-              Technical lead for B2B applications.  Responsible for teams building applications with React and Spring Boot microservices.
+              Tech lead for B2B applications.  Responsible for Brazil-based engineering teams building applications with React and Spring Boot microservices.
             </p>
           </div>
-          <div className="h5 list-item-right"><i>2019 - present</i></div>
+          <div className="h5 list-item-right"><i>2019 - 2020</i></div>
         </div>                
         <div className="list-item">
           <div className="list-item-left">
             <h4>Newell Brands - Hoboken, NJ</h4>
             <h5>Frontend Tech Lead</h5>
             <p>
-              Technical lead for CMS development team.  Responsible for a distributed team of frontend developers.
+              Tech lead for CMS development team.  Responsible for a distributed team of frontend developers.
             </p>
           </div>
           <div className="h5 list-item-right"><i>2018 - 2019</i></div>

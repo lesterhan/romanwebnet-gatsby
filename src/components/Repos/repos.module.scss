@@ -1,26 +1,17 @@
 @import "../../scss/helpers/variables";
 @import "../../scss/helpers/mixins";
 
-.repos {
+.repo {
+  border: solid 2px $gray-dark;
+  padding: $spacer-mobile-large;
+  margin-bottom: $spacer-mobile-large;
+}
 
-  .repo {
-    border: solid 2px $gray-dark;
-    padding: $spacer-mobile-large;
-    margin-bottom: $spacer-mobile-large;
-  }
-
-  .list-item-right {
-    font-weight: $font-bold;
-    margin: $spacer-mobile-huge 0 0;
-  }
+.linkout {
+  font-weight: $font-bold;
+  margin: $spacer-mobile-huge 0 0;
 
   @include media-tablet {
-    .repos {
-
-      .list-item-right {
-        margin: 0;
-      }
-    }
-
+    margin: 0;
   }
 }
