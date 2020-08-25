@@ -10,7 +10,7 @@ const BusinessCard = () => (
       </h1>
       <h4 className={styles.title}><b className={styles.titleB}>S</b>oftware <b className={styles.titleB}>E</b>ngineer</h4>
     </div>
-    <h6 className={styles.contact}>Jersey City, NJ 07302 | gregorymichaelroman@gmail.com</h6>
+    <h6 className={styles.contact}>Jersey City, NJ | gregorymichaelroman@gmail.com</h6>
     <div className={styles.arrow}>
       <Icon className="bounce" symbol="chevron-down" />
     </div>      
