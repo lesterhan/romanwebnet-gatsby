@@ -1,5 +1,6 @@
+contentId: repos
 title: Pinned Repositories
-content:
+items:
   - 
     slug: vue-pwa-starter
     title: Vue PWA Starter
