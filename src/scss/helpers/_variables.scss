@@ -46,10 +46,10 @@ $spacer-tablet-huge: 60px;
  * Typography
  */
 
-$font-family-sans-serif: 'Lato', Helvetica, Arial, sans-serif;
+$font-family-sans-serif: Helvetica, Arial, sans-serif;
 $font-family-serif: 'Georgia', serif;
-$font-family-fancy: 'EB Garamond';
-$font-family-base: $font-family-sans-serif;
+// $font-family-fancy: 'EB Garamond';
+$font-family-base: $font-family-serif;
 $font-color-base: $gray-dark;
 
 $font-light: 300;
@@ -71,5 +71,5 @@ $font-size-tablet-large: 20px;
 $font-size-tablet-larger: 26px;
 
 
-$line-height-base: 1.6;
+$line-height-base: 1.75;
 $line-height-heading: 1.1;

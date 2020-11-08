@@ -51,6 +51,11 @@
 .experience {
 
   h5 {
-    margin-bottom: $spacer-mobile;
+    margin-bottom: $spacer-mobile-large;
   }
+}
+
+.italic {
+  font-style: italic;
+  color: $gray-medium;
 }

@@ -6,6 +6,10 @@
   position: relative;
 }
 
+.heading, .name, .contact {
+  font-family: $font-family-serif;
+}
+
 .heading {
   @include centered();
   text-align:center;

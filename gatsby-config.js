@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `Romanwebnet.com`,
+    description: `Website of Gregory M. Roman. Software Engineer. Jersey City, NY`,
     author: `@gatsbyjs`,
   },
   plugins: [
@@ -39,13 +39,13 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
-    {
-      resolve: 'gatsby-plugin-web-font-loader',
-      options: {
-        google: {
-          families: ['Lato:300', 'EB Garamond:600']
-        }
-      }
-    },    
+    // {
+    //   resolve: 'gatsby-plugin-web-font-loader',
+    //   options: {
+    //     google: {
+    //       families: ['Lato:300', 'EB Garamond:600']
+    //     }
+    //   }
+    // },    
   ],
 }
