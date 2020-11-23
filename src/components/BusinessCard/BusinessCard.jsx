@@ -6,7 +6,7 @@ const BusinessCard = () => (
   <div className={styles.root}>
     <div className={styles.heading}>
       <h1 className={styles.name}>
-        <b className={styles.nameB}>G</b>regory <b className={styles.nameB}>Roman</b>
+        <b className={styles.nameB}>G</b>reg <b className={styles.nameB}>Roman</b>
       </h1>
       <h4 className={styles.title}><b className={styles.titleB}>S</b>oftware <b className={styles.titleB}>E</b>ngineer</h4>
     </div>

@@ -68,7 +68,6 @@ const Resume = () => {
           <div className="column">
             <h3 className="font-bold">Tools</h3>
             <ul>
-              <li>Bash</li>
               <li>Git</li>
               <li>npm / yarn</li>
               <li>Webpack / Gulp / Grunt</li>
