@@ -1,0 +1,36 @@
+@import "../../scss/helpers/variables";
+@import "../../scss/helpers/mixins";
+
+.card {
+  display: flex;
+  justify-content: space-between;  
+  border: solid 1px $gray-dark;
+  padding: $spacer-mobile-large;
+  margin-bottom: $spacer-mobile-large;
+  background-color: white;
+}
+
+.card-left {
+  padding-right: $spacer-tablet-large;
+}
+
+.card-right {
+  min-width: 20%;
+  text-align: right;
+  margin: $spacer-mobile-huge 0 0;
+
+  @include media-tablet {
+    margin: 0;
+  }  
+}
+
+.cta {
+  font-weight: $font-bold;
+}
+
+.subtext {
+  margin-top: $spacer-mobile-huge;
+  color: $gray-medium;
+}
+
+.card-list {}
