@@ -36,3 +36,15 @@ $tablet-height: 80px;
     height: $tablet-height;
   }  
 }
+
+.spacer {
+  padding: 20px 0;   
+}
+
+.spacer-inner {
+  height: $mobile-height;
+  
+  @include media-tablet {
+    height: $tablet-height;
+  }    
+}

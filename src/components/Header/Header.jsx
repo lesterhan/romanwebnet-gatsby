@@ -74,4 +74,10 @@ const Header = () => (
   </header>
 );
 
+export const NavSpacer = () => (
+  <div className={styles.spacer}>
+    <div className={styles.spacerInner} />
+  </div>
+);
+
 export default Header

@@ -10,9 +10,8 @@ import PropTypes from "prop-types"
 // import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "../components/Header";
-import BusinessCard from '../components/BusinessCard';
 import Footer from "../components/Footer";
-// import "./layout.css"
+import { NavSpacer } from '../components/Header';
 import '../scss/main.scss';
 
 const Layout = ({ children }) => {
@@ -29,8 +28,8 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header />
-      <BusinessCard />
       <main>
+        <NavSpacer />
         {children}
       </main>
       <Footer />

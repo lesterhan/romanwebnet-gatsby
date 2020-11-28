@@ -1,17 +1,12 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import BusinessCard from '../components/BusinessCard';
-import Resume from "../components/Resume";
-import Repos from "../components/Repos";
+import Recipes from "../components/Recipes"
 
-const IndexPage = () => (
+const RecipesPage = () => (
   <Layout>
-    <SEO title="Home" />
-    <BusinessCard />
-    <Resume />
-    <Repos />
-
+    <SEO title="Recipes" />
+    <Recipes />
     {/* 
     https://www.gatsbyjs.org/docs/adding-analytics/
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112401659-1"></script>
@@ -25,4 +20,4 @@ const IndexPage = () => (
   </Layout>
 )
 
-export default IndexPage
+export default RecipesPage;

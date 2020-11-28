@@ -1,0 +1,24 @@
+contentId: recipes
+title: Recipes
+items:
+  - 
+    title: Foil Packet Salmon
+    description: Simple, delicious and fool proof Salmon recipe with easy clean up.
+    slug: foil-packet-salmon
+  - 
+    title: Spice Rubbed Pork Chops
+    description: Easy oven roasted pork chops with home made spice rub.
+    slug: spice-rubbed-pork-chops
+  - 
+    title: Instant Pot Salmon and Lentils
+    description: Healthy, filling one-pot meal with minimal clean up.
+    slug: instant-pot-salmon-and-lentils
+  - 
+    title: Overnight Oats
+    description: Mix ingredients the night before and wake up to a delicious, healthy oatmeal breakfast.
+    slug: overnight-oats
+  - 
+    title: Instant Pot Oatmeal
+    description: Get perfect oatmeal every time with this simple instant pot recipe.
+    slug: instant-pot-oatmeal
+
