@@ -1,55 +1,49 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery } from 'gatsby';
 import Panel from '../Panel';
 import Container from '../Container';
 import Heading from '../Heading';
 import { Card, CardList } from '../Card';
 
 const Recipes = () => {
-  const { 
-    allContentYaml: { 
-      edges: [
-        { 
-          node: { items, title } 
-        }
-      ]
-    } 
-  } = useStaticQuery(graphql`
-    query RecipesQuery {
-      allContentYaml(filter: {contentId: {eq: "recipes"}}) {
+  const data = useStaticQuery(graphql`
+    query {
+      allMarkdownRemark(filter: {frontmatter: {categories: {in: "Recipes"}}}) {
+        totalCount
         edges {
           node {
-            items {
-              title,
-              description
+            id
+            frontmatter {
+              title
+              date(formatString: "DD MMMM, YYYY")
             }
-            title
+            excerpt
+            fields {
+              slug
+            }
           }
         }
       }
     }
   `);
+
   return (
     <Panel theme="light">
       <Container>
-        <Heading element="h2" theme="dark" text={title}/>
+        <Heading element="h2" theme="dark" text="Recipes" />
         <CardList>
           {   
-            items.map(({
-              slug,
-              title,
-              description,
-              tags
-            }) => 
+            data.allMarkdownRemark.edges.map(({ node }) => (
               <Card
+                key={node.id}
                 cta="View Recipe"
-                description={description}
-                link={`/`}
+                description={node.excerpt}
+                link={node.fields.slug}
                 // subtext={tags}
-                title={title}
+                title={node.frontmatter.title}
               />
             )
-          }
+            )}
         </CardList>
       </Container>
     </Panel>

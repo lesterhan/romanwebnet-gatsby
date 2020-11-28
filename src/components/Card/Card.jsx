@@ -7,6 +7,7 @@ const Card = ({
   link,
   subtext,
   title,
+  external = false,
 }) => (
   <div className={styles.card}>
     <div className={styles.cardLeft}>
@@ -24,7 +25,7 @@ const Card = ({
     <h5 className={styles.cardRight}>
       <a 
         className={styles.cta}
-        target="_blank" 
+        target={external ? '_blank': '_self'}
         rel="noopener noreferrer" 
         href={link} 
         title={cta}>

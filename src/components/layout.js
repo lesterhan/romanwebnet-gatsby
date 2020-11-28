@@ -11,7 +11,6 @@ import PropTypes from "prop-types"
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { NavSpacer } from '../components/Header';
 import '../scss/main.scss';
 
 const Layout = ({ children }) => {
@@ -29,7 +28,6 @@ const Layout = ({ children }) => {
     <>
       <Header />
       <main>
-        <NavSpacer />
         {children}
       </main>
       <Footer />

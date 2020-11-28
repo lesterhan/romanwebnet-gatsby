@@ -1,0 +1,14 @@
+---
+title: "Instant Pot Oatmeal"
+date: "2020-10-15"
+categories: ["Recipes"]
+---
+
+Get perfect oatmeal every time with this simple instant pot recipe.
+<!-- excerpt end -->
+
+## Ingredients
+- Foo
+- Bar
+- Fizz
+- Buzz
