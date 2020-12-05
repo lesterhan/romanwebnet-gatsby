@@ -6,7 +6,7 @@ import Resume from "../components/Resume";
 import Repos from "../components/Repos";
 
 const IndexPage = () => (
-  <Layout>
+  <Layout headerTheme="expanded">
     <SEO title="Home" />
     <BusinessCard />
     <Resume />

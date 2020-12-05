@@ -22,3 +22,8 @@
   left:50%;
   transform:translate3d(-50%, -50%, 0);
 }
+
+@mixin blog-container {
+  max-width: 767px;
+  margin: 0 auto;
+}

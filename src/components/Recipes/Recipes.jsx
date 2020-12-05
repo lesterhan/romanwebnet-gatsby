@@ -39,7 +39,6 @@ const Recipes = () => {
                 cta="View Recipe"
                 description={node.excerpt}
                 link={node.fields.slug}
-                // subtext={tags}
                 title={node.frontmatter.title}
               />
             )

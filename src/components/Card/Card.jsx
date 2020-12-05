@@ -13,7 +13,7 @@ const Card = ({
     <div className={styles.cardLeft}>
       <h4 className="title">
         { link ? (
-            <a target="_blank" rel="noopener noreferrer" href={link} title={title}>{title}</a>
+            <a target={external ? '_blank': '_self'} rel="noopener noreferrer" href={link} title={title}>{title}</a>
           ) : (
             {title}
           )

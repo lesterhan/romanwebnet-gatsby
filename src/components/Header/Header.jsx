@@ -62,22 +62,29 @@ const HeaderLink = ({ root, icon }) => (
   </a>
 );
 
-const Header = () => (
-  <header className={styles.root}>
-    <Container element="nav" className={`${styles.nav}`} padded={false}>
-      {
-        links.map((link, key) => 
-          <HeaderLink {...link} key={key} />
-        )
-      }
+const renderLinks = () => (
+  links.map((link, key) => 
+    <HeaderLink {...link} key={key} />
+  )
+);
+
+const CompactNav = () => (
+  <>
+    <div class={styles.compactLogo}>
+      <h3><a href="/" title="home">Romanwebnet.com</a></h3>
+    </div>
+    <div class={styles.compactLinks}>
+      {renderLinks()}
+    </div>
+  </>
+);
+
+const Header = ({ theme = 'compact' }) => (
+  <header className={styles[theme]}>
+    <Container element="nav" className={styles.nav} padded={false}>
+      { theme === 'compact' ? <CompactNav /> : renderLinks()}
     </Container>
   </header>
 );
 
-export const NavSpacer = () => (
-  <div className={styles.spacer}>
-    <div className={styles.spacerInner} />
-  </div>
-);
-
-export default Header
+export default Header;

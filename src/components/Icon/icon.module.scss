@@ -6,11 +6,3 @@
   width: 100%;
   vertical-align: middle;
 }
-
-.defaultSize {
-  height: 38px;
-
-  @include media-tablet {
-    height: 72px;
-  }  
-}
