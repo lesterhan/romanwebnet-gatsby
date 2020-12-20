@@ -5,12 +5,13 @@ import Icon from '../Icon';
 const BusinessCard = () => (
   <div className={styles.root}>
     <div className={styles.heading}>
-      <h1 className={styles.name}>
+      {/* <h1 className={styles.name}>
         <b className={styles.nameB}>G</b>reg <b className={styles.nameB}>Roman</b>
-      </h1>
-      <h4 className={styles.title}><b className={styles.titleB}>S</b>oftware <b className={styles.titleB}>E</b>ngineer</h4>
+      </h1> */}
+      {/* <h4 className={styles.title}><b className={styles.titleB}>S</b>oftware <b className={styles.titleB}>E</b>ngineer</h4> */}
     </div>
-    <h6 className={styles.contact}>Jersey City, NJ | gregorymichaelroman@gmail.com</h6>
+    <h6 className={styles.contact}>Jersey City, NJ</h6>
+     {/* | gregorymichaelroman@gmail.com */}
     <div className={styles.arrow}>
       <Icon className="bounce" symbol="chevron-down" />
     </div>      

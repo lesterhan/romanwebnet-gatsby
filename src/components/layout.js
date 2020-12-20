@@ -13,7 +13,11 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import '../scss/main.scss';
 
-const Layout = ({ children, headerTheme }) => {
+const Layout = ({ 
+  children, 
+  headerTheme,
+  hasFooter = true,
+}) => {
   // const data = useStaticQuery(graphql`
   //   query SiteTitleQuery {
   //     site {
@@ -30,7 +34,7 @@ const Layout = ({ children, headerTheme }) => {
       <main>
         {children}
       </main>
-      <Footer />
+      { hasFooter && <Footer /> }
     </>
   )
 }

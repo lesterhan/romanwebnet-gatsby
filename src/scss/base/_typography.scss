@@ -93,6 +93,11 @@ a {
     color: $gray-dark;
   }
 
+  &.light,
+  &.light:visited{
+    color: $gray-lightest;
+  }  
+
   &:hover{
     text-decoration: underline;
   }
