@@ -4,7 +4,7 @@ import SEO from "../../components/seo"
 import Resume from "../../components/Resume";
 import Repos from "../../components/Repos";
 
-const ResumePage = () => (
+const AboutPage = () => (
   <Layout>
     <SEO title="Resume" />
     <Resume />
@@ -22,4 +22,4 @@ const ResumePage = () => (
   </Layout>
 );
 
-export default ResumePage;
+export default AboutPage;

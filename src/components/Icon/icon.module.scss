@@ -2,7 +2,28 @@
 @import "../../scss/helpers/mixins";
 
 .root {
-  height: 44px;
-  width: 44px;
+  height: 28px;
+  width: 28px;
   vertical-align: middle;
+  
+  @include media-tablet {
+    height: 44px;
+    width: 44px;
+  }  
+}
+
+.about {
+  width: 32px;
+
+  @include media-tablet {
+    width: 50px;  
+  }    
+}
+
+.chevron {
+  width: 18px;
+
+  @include media-tablet {
+      width: 28px;
+  }     
 }

@@ -1,3 +1,3 @@
-import Header, { NavSpacer } from './Header';
-export { NavSpacer };
+import Header from './Header';
+
 export default Header;

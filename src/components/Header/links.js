@@ -1,36 +1,13 @@
-// TODO: Move this to markdown.
 export default [
-  // {
-  //   root: {
-  //     href: 'https://medium.com/@romanwebnet',
-  //     title: 'Blog',
-  //   },
-  //   icon: {
-  //     symbol: 'rss',
-  //   }
-  // },
   { 
     root: {
-      href: '/resume',
-      title: 'Resume',
-    }
-  },
-  { 
-    root: {
-      href: '/recipes',
-      title: 'Recipes',
-    }
-  },
-  {
-    root: {
-      href: 'https://twitter.com/romanwebnet',
-      title: 'Twitter',
-      ext: true,
+      href: '/about',
+      title: 'About',
     },
     icon: {
-      symbol: 'twitter',
-    }
-  },
+      symbol: 'about',
+    }     
+  },  
   {
     root: {
       href: 'https://github.com/groman00',
@@ -40,7 +17,7 @@ export default [
     icon: {
       symbol: 'github',
     }
-  },    
+  },      
   {
     root: {
       href: 'https://www.linkedin.com/in/gregory-roman-8486485',
@@ -51,13 +28,32 @@ export default [
       symbol: 'linkedin',
     }
   }, 
-  {
+  { 
     root: {
-      href: 'mailto:gregorymichaelroman@gmail.com',
-      title: 'Email',
+      href: '/recipes',
+      title: 'Recipes',
     },
     icon: {
-      symbol: 'email',
+      symbol: 'recipes',
+    }    
+  }, 
+  {
+    root: {
+      href: 'https://twitter.com/romanwebnet',
+      title: 'Twitter',
+      ext: true,
+    },
+    icon: {
+      symbol: 'twitter',
     }
-  },     
+  }, 
+  // {
+  //   root: {
+  //     href: 'mailto:gregorymichaelroman@gmail.com',
+  //     title: 'Email',
+  //   },
+  //   icon: {
+  //     symbol: 'email',
+  //   }
+  // },     
 ];

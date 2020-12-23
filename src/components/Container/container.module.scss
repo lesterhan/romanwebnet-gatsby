@@ -2,27 +2,13 @@
 @import "../../scss/helpers/mixins";
 
 .root {
-  max-width: 100%;;
-  margin-right: auto;
-  margin-left: auto;
-  
-  @include media-tablet-small {
-    max-width: $tablet-small-width;
-  }
-  
-  @include media-tablet {
-    max-width: $tablet-width;
-  }
-  
-  @include media-desktop {
-    max-width: $desktop-width;
-  }  
-}
+  @include container;
 
-.padded {
-  padding: $spacer-mobile-huge $spacer-mobile-large;
+  padding-top: $spacer-mobile-huge;
+  padding-bottom: $spacer-mobile-huge;
   
   @include media-tablet {
-    padding: $spacer-tablet-huge $spacer-tablet-large;
-  }  
+    padding-top: $spacer-tablet-huge;
+    padding-bottom: $spacer-tablet-huge;
+  }    
 }

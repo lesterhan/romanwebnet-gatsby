@@ -2,23 +2,36 @@
 @import "../../scss/helpers/mixins";
 
 $tablet-height: 80px;
+$transparent-black: rgba(0, 0, 0, .1);
 
 .nav {
-  display: flex;
-  justify-content: space-between;
-  // padding: $spacer-lg 0;
+  @include container;
+
+  display: flex;  
 }
 
 .link {
   border-radius: 5px;
-  // margin: 0 10px;
-  transition: all $transition-speed-slow ease-in-out;
-  padding: $spacer-lg;
+  transition: all $transition-speed-normal ease-in-out;
+  padding: $spacer-md;
 
+  @include media-tablet {
+    padding: $spacer-lg;
+  }
+  
   &:hover {
     background-color: $gray-dark;
     color: $white;
-  }  
+    text-decoration: none;
+  } 
+}
+
+.chevron {
+  transform: scale(.75);
+
+  :not(:hover) & {    
+    color: $transparent-black;
+  }
 }
 
 .logo {
@@ -31,4 +44,46 @@ $tablet-height: 80px;
 
 .logo-text {
   margin-bottom: 0;
+}
+
+.default {
+  
+  .nav {
+    justify-content: space-between;
+    margin-top: $spacer-lg;
+    margin-bottom: $spacer-lg;
+  }
+}
+
+.home {
+  
+  .nav {
+    flex-direction: column;
+    margin-top: $spacer-lg;
+    margin-bottom: $spacer-lg;
+  }
+
+  .link {
+    display: flex;
+    align-items: center;  
+    font-size: $font-size-larger;  
+    border: solid 1px $transparent-black;
+    margin-bottom: $spacer-lg;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 700px;  
+
+    &:last-child {
+      margin-bottom: 0;
+    }  
+    
+    > svg:first-child {
+      margin-right: $spacer-xl;
+    }
+  
+    > span {
+      flex: 1;
+    }    
+  }
 }

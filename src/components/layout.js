@@ -15,7 +15,7 @@ import '../scss/main.scss';
 
 const Layout = ({ 
   children, 
-  headerTheme,
+  renderHeader = null,
   hasFooter = true,
 }) => {
   // const data = useStaticQuery(graphql`
@@ -30,7 +30,7 @@ const Layout = ({
 
   return (
     <>
-      <Header theme={headerTheme}/>
+      {renderHeader ? renderHeader() : <Header />}
       <main>
         {children}
       </main>

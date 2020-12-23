@@ -1,11 +1,12 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Header from "../components/Header";
 
 const IndexPage = () => (
   <Layout 
-    headerTheme="expanded"
     hasFooter={false}
+    renderHeader={() => <Header theme="home" />}
   >
     <SEO title="Home" />
     {/* 

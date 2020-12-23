@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from './panel.module.scss';
 
 const themes = {
   none: 'bg-transparent',

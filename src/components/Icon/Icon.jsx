@@ -1,8 +1,10 @@
 import React from 'react';
 import styles from './icon.module.scss';
 
-const Icon = ({ symbol, size = 'default', className }) => (
-  <svg className={`${styles.root} ${styles[size + 'Size']} ${className}`}>
+const Icon = ({ symbol, ...props }) => (
+  <svg 
+    className={`${styles.root} ${styles[symbol]} ${props.className}`}
+  >
     <use xlinkHref={`#icon-${symbol}`} />
   </svg>  
 );
