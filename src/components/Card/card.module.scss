@@ -8,19 +8,26 @@
   padding: $spacer-mobile-large;
   margin-bottom: $spacer-mobile-large;
   background-color: white;
+  flex-direction: column;
+
+  @include media-tablet {
+    flex-direction: row;
+  }
 }
 
 .card-left {
-  padding-right: $spacer-tablet-large;
+  @include media-tablet {
+    padding-right: $spacer-tablet-large;    
+  }  
 }
 
 .card-right {
   min-width: 20%;
   text-align: right;
-  margin: $spacer-mobile-huge 0 0;
+  margin-top: $spacer-xxl;
 
   @include media-tablet {
-    margin: 0;
+    margin-top: 0;
   }  
 }
 
@@ -29,8 +36,13 @@
 }
 
 .subtext {
-  margin-top: $spacer-mobile-huge;
   color: $gray-medium;
 }
 
-.card-list {}
+.description {
+  margin-bottom: $spacer-lg;
+  
+  @include media-tablet {
+    margin-bottom: $spacer-xl;
+  }    
+}

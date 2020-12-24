@@ -19,8 +19,8 @@ const Card = ({
           )
         }
       </h4>
-      <p className="description">{description}</p>
-      <h5 className={`${styles.subtext}`}>{subtext}</h5>
+      <p className={styles.description}>{description}</p>
+      { subtext && <h5 className={`${styles.subtext}`}>{subtext}</h5> }
     </div>
     <h5 className={styles.cardRight}>
       <a 
