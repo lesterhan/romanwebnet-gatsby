@@ -8,7 +8,16 @@ import { Card, CardList } from '../Card';
 const Recipes = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark(filter: {frontmatter: {categories: {in: "Recipes"}}}) {
+      allMarkdownRemark(filter: {
+        frontmatter: {
+          categories: {
+            in: "Recipes"
+          },
+          status: {
+            eq: "published"
+          }
+        }
+      }) {
         totalCount
         edges {
           node {

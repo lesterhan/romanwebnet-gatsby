@@ -2,9 +2,10 @@
 title: "Spice Rubbed Pork Chops"
 date: "2020-07-14"
 categories: ["Recipes"]
+status: "published"
 ---
 
-Easy oven roasted pork chops with home made spice rub.
+Oven roasted pork chops with home made spice rub.
 <!-- excerpt end -->
 
 ## Ingredients

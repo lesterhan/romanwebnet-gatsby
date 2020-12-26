@@ -2,6 +2,7 @@
 title: "Instant Pot Oatmeal"
 date: "2020-10-15"
 categories: ["Recipes"]
+status: "draft"
 ---
 
 Get perfect oatmeal every time with this simple instant pot recipe.

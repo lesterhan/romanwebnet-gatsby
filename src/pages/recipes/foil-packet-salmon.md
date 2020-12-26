@@ -2,6 +2,7 @@
 title: "Foil Packet Salmon"
 date: "2020-04-20"
 categories: ["Recipes"]
+status: "draft"
 ---
 
 Simple, delicious and fool proof Salmon recipe with easy clean up.
