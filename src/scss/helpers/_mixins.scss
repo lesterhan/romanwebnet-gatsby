@@ -22,3 +22,30 @@
   left:50%;
   transform:translate3d(-50%, -50%, 0);
 }
+
+@mixin blog-container {
+  max-width: 767px;
+  margin: 0 auto;
+}
+
+@mixin container {
+  max-width: 100%;;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: $spacer-mobile-large;
+  padding-right: $spacer-mobile-large;
+
+  @include media-tablet-small {
+    max-width: $tablet-small-width;
+  }
+  
+  @include media-tablet {
+    max-width: $tablet-width;
+    padding-left: $spacer-tablet-large;    
+    padding-right: $spacer-tablet-large;
+  }
+  
+  @include media-desktop {
+    max-width: $desktop-width;
+  }  
+}

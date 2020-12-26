@@ -10,12 +10,14 @@ import PropTypes from "prop-types"
 // import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "../components/Header";
-import BusinessCard from '../components/BusinessCard';
 import Footer from "../components/Footer";
-// import "./layout.css"
 import '../scss/main.scss';
 
-const Layout = ({ children }) => {
+const Layout = ({ 
+  children, 
+  renderHeader = null,
+  hasFooter = true,
+}) => {
   // const data = useStaticQuery(graphql`
   //   query SiteTitleQuery {
   //     site {
@@ -28,12 +30,11 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header />
-      <BusinessCard />
+      {renderHeader ? renderHeader() : <Header />}
       <main>
         {children}
       </main>
-      <Footer />
+      { hasFooter && <Footer /> }
     </>
   )
 }

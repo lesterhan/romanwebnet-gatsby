@@ -49,6 +49,7 @@ const Repos = () => {
                 link={`https://github.com/groman00/${slug}`}
                 subtext={tags}
                 title={title}
+                external
               />
             )
           }

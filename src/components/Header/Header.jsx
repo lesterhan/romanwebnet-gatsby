@@ -1,77 +1,46 @@
 import React from 'react';
 import styles from './header.module.scss';
 import Icon from '../Icon';
-import Container from '../Container';
+import links from './links';
 
-const links = [
-  {
-    root: {
-      href: 'https://medium.com/@romanwebnet',
-      title: 'Blog',
-    },
-    icon: {
-      symbol: 'rss',
-    }
-  },
-  {
-    root: {
-      href: 'https://twitter.com/romanwebnet',
-      title: 'Twitter',
-    },
-    icon: {
-      symbol: 'twitter',
-    }
-  },
-  {
-    root: {
-      href: 'https://github.com/groman00',
-      title: 'Github',
-    },
-    icon: {
-      symbol: 'github',
-    }
-  },    
-  {
-    root: {
-      href: 'https://www.linkedin.com/in/gregory-roman-8486485',
-      title: 'LinkedIn',
-    },
-    icon: {
-      symbol: 'linkedin',
-    }
-  }, 
-  {
-    root: {
-      href: 'mailto:gregorymichaelroman@gmail.com',
-      title: 'Email',
-    },
-    icon: {
-      symbol: 'email',
-    }
-  },     
-];
-
-const HeaderLink = ({ root, icon }) => (
+const HeaderLink = ({ root, children }) => (
   <a 
     className={styles.link} 
-    target="_blank" 
     rel="noopener noreferrer"
     {...root}
   >
-    <Icon {...icon} />
+    {children}
   </a>
 );
 
-const Header = () => (
-  <header className={styles.root}>
-    <Container element="nav" className={`${styles.nav}`} padded={false}>
-      {
-        links.map((link, key) => 
-          <HeaderLink {...link} key={key} />
-        )
-      }
-    </Container>
-  </header>
-);
+const Header = ({ theme = 'default' }) => {
+  const LogoTag = theme === 'home' ? 'h1' : 'h3';
+  return (
+    <header className={styles[theme]}>
+      <div className={styles.logo}>
+        <LogoTag className={`h5 ${styles.logoText}`}>
+          <a className="light" href="/" title="home">Romanwebnet.com</a>
+        </LogoTag>
+      </div>    
+      <nav className={styles.nav}>
+        {   
+          links.map(({ root, icon }, key) => 
+            <HeaderLink root={root} key={key}>
+              <Icon {...icon} />
+              {
+                theme === 'home' && (
+                  <>
+                    <span>{root.title}</span>
+                    <Icon className={styles.chevron} symbol="chevron" />              
+                  </>
+                )
+              }
+            </HeaderLink>
+          )
+        }
+      </nav>
+    </header>
+  );
+};
 
-export default Header
+export default Header;

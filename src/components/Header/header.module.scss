@@ -1,38 +1,89 @@
 @import "../../scss/helpers/variables";
 @import "../../scss/helpers/mixins";
 
-$mobile-height: 44px;
 $tablet-height: 80px;
-
-.root {
-  position: absolute;
-  width: 100%;
-  z-index: 1;
-}
+$transparent-black: rgba(0, 0, 0, .1);
 
 .nav {
-  display: flex;
-  padding: 20px 0;
+  @include container;
+
+  display: flex;  
 }
 
 .link {
-  display: flex;
-  align-items: center;
-  position:relative;
-  line-height: 1;
-  height: $mobile-height;
-  color: $gray-dark;
-  background-color: transparent;
   border-radius: 5px;
-  margin: 0 10px;
-  transition: all $transition-speed-slow ease-in-out;
+  transition: all $transition-speed-normal ease-in-out;
+  padding: $spacer-md;
 
+  @include media-tablet {
+    padding: $spacer-lg;
+  }
+  
   &:hover {
     background-color: $gray-dark;
     color: $white;
-  }  
+    text-decoration: none;
+  } 
+}
+
+.chevron {
+  transform: scale(.75);
+
+  :not(:hover) & {    
+    color: $transparent-black;
+  }
+}
+
+.logo {
+  flex-grow: 1;
+  display: flex;           
+  justify-content: center;
+  background-color: $black;
+  padding: $spacer-md 0;
+}
+
+.logo-text {
+  margin-bottom: 0;
+}
+
+.default {
   
-  @include media-tablet {
-    height: $tablet-height;
-  }  
+  .nav {
+    justify-content: space-between;
+    margin-top: $spacer-lg;
+    margin-bottom: $spacer-lg;
+  }
+}
+
+.home {
+  
+  .nav {
+    flex-direction: column;
+    margin-top: $spacer-lg;
+    margin-bottom: $spacer-lg;
+  }
+
+  .link {
+    display: flex;
+    align-items: center;  
+    font-size: $font-size-larger;  
+    border: solid 1px $transparent-black;
+    margin-bottom: $spacer-lg;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 700px;  
+
+    &:last-child {
+      margin-bottom: 0;
+    }  
+    
+    > svg:first-child {
+      margin-right: $spacer-xl;
+    }
+  
+    > span {
+      flex: 1;
+    }    
+  }
 }

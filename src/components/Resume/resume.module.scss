@@ -16,38 +16,6 @@
   }
 }
 
-.skills {
-
-  .column {
-    @extend .clearfix;
-  }
-
-  li {
-    float: left;
-    margin-right: 5px;
-
-    &:after {
-      content: ', ';
-    }
-
-    &:last-child:after {
-      content: '';
-    }
-  }
-
-  @include media-tablet {
-
-    li {
-      float: none;
-      margin-right: 0;
-
-      &:after {
-        content: '';
-      }
-    }
-  }
-}
-
 .experience {
 
   h5 {

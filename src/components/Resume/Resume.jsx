@@ -87,8 +87,8 @@ const Resume = () => {
         </div>
         <Heading element="h2" text={resumeTitle}/>      
         <div className={`${styles.experience} list`}>          
-          { resumeItems.map(item => (
-            <div className="list-item">
+          { resumeItems.map((item, key) => (
+            <div className="list-item" key={key}>
               <div className="list-item-left">
                 <h4>{item.title}</h4>
                 <h5 className={styles.italic}>{item.company} - {item.location}</h5>
