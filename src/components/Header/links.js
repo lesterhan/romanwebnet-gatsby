@@ -12,7 +12,7 @@ export default [
     root: {
       href: 'https://github.com/groman00',
       title: 'Github',
-      ext: true,
+      target: '_blank',
     },
     icon: {
       symbol: 'github',
@@ -22,7 +22,7 @@ export default [
     root: {
       href: 'https://www.linkedin.com/in/gregory-roman-8486485',
       title: 'LinkedIn',
-      ext: true,
+      target: '_blank',
     },
     icon: {
       symbol: 'linkedin',
@@ -41,7 +41,7 @@ export default [
     root: {
       href: 'https://twitter.com/romanwebnet',
       title: 'Twitter',
-      ext: true,
+      target: '_blank',
     },
     icon: {
       symbol: 'twitter',

@@ -6,7 +6,6 @@ import links from './links';
 const HeaderLink = ({ root, children }) => (
   <a 
     className={styles.link} 
-    target={`${root.ext ? '_blank': '_self'}`} 
     rel="noopener noreferrer"
     {...root}
   >

@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../../components/layout"
 import Container from '../../components/Container';
 import styles from './blogPost.module.scss';
+import SEO from '../../components/seo';
 
 const BreadCrumb = ({ title }) => (
   <div className={styles.breadcrumb}>
@@ -17,6 +18,10 @@ const BlogPost = ({ data }) => {
   const { title } = post.frontmatter;
   return (  
     <Layout>
+      <SEO 
+        title={title} 
+        description={post.excerpt}
+      />
       <article className={styles.article}>
         <Container>
           <BreadCrumb title={title} />          
@@ -33,8 +38,9 @@ export const query = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
-        title
+        title,
       }
+      excerpt
     }
   }
 `
