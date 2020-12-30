@@ -80,6 +80,11 @@ $transparent-black: rgba(0, 0, 0, .1);
     
     > svg:first-child {
       margin-right: $spacer-xl;
+      min-width: 26px;
+      
+      @include media-tablet {
+        min-width: 64px;        
+      }      
     }
   
     > span {

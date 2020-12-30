@@ -27,3 +27,11 @@
       width: 28px;
   }     
 }
+
+.recipes {
+  width: 23px;
+
+  @include media-tablet {
+      width: 36px;
+  }     
+}
