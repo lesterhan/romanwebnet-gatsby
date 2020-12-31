@@ -42,8 +42,8 @@ const Resume = () => {
           contact me at <a title="Email" href="mailto:gregorymichaelroman@gmail.com">gregorymichaelroman@gmail.com</a> or follow me on Twitter <a href="https://twitter.com/romanwebnet" title="Twitter" target="_blank" rel="noopener noreferrer">@romanwebnet</a>.
         </p>
         <Heading element="h2" text="Skills"/>
-        <div className={`${styles.skills} flex-columns`}>
-          <div className="column">
+        <div className={`${styles.skills}`}>
+          <div className={`${styles.column}`}>
             <h3 className="font-bold">Languages</h3>
             <ul>
               <li>JavaScript / ES5 / ES6</li>
@@ -86,17 +86,17 @@ const Resume = () => {
           </div>
         </div>
         <Heading element="h2" text={resumeTitle}/>      
-        <div className={`${styles.experience} list`}>          
+        <div className={styles.experience}>          
           { resumeItems.map((item, key) => (
-            <div className="list-item" key={key}>
-              <div className="list-item-left">
+            <div className={styles.experienceItem} key={key}>
+              <div className={styles.experienceItemLeft}>
                 <h4>{item.title}</h4>
                 <h5 className={styles.italic}>{item.company} - {item.location}</h5>
                 <p>
                   {item.blurb}
                 </p>
               </div>
-              <div className={`${styles.italic} list-item-right`}>{item.dateRange}</div>
+              <div className={styles.experienceItemRight}>{item.dateRange}</div>
             </div>
           ))}
           

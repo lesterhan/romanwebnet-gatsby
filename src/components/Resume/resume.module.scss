@@ -16,6 +16,17 @@
   }
 }
 
+.skills {
+  @include media-tablet {
+    display: flex;
+    justify-content: space-between;
+  }  
+}
+
+.skills-column {
+  margin-bottom: $spacer-mobile-large;
+}
+
 .experience {
 
   h5 {
@@ -23,7 +34,31 @@
   }
 }
 
-.italic {
+.experience-item {
+  margin-bottom: $spacer-mobile-huge;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include media-tablet {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.experience-item-left {
+  @include media-tablet {
+    padding-right: $spacer-tablet-large;
+  }
+}
+
+.experience-item-right {
   font-style: italic;
   color: $gray-medium;
+  
+  @include media-tablet {
+    min-width: 20%;
+    text-align: right;
+  }
 }
