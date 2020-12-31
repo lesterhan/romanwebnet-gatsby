@@ -12,7 +12,6 @@ $gray-lighter: #cccccc;
 $gray-light: #aaaaaa;
 $gray-medium: #7a7a7a;
 $gray-dark: #383232;
-// $gray-dark: #4A4A4A;
 $gray-darker: #222;
 $page-background-color: #f7f5f0;
 
@@ -23,30 +22,24 @@ $transition-speed-fast: 100ms;
 $transition-speed-normal: 300ms;
 $transition-speed-slow: 500ms;
 
-
 /*
- * Grid
+ * Containers
  */
 $tablet-small-width: 640px;
 $tablet-width: 768px;
 $desktop-width: 1024px;
 
-$spacer-mobile-small: 5px;
-$spacer-mobile: 10px;
-$spacer-mobile-large: 20px;
-$spacer-mobile-huge: 40px;
-
-$spacer-tablet-small: 8px;
-$spacer-tablet: 15px;
-$spacer-tablet-large: 30px;
-$spacer-tablet-huge: 60px;
-
+/*
+ * Spacers
+ */
 $spacer-sm: 4px;
 $spacer-md: 8px;
 $spacer-lg: 16px;
 $spacer-xl: 24px;
 $spacer-xxl: 32px;
-$spacer-xxxl: 48px;
+$spacer-xxxl: 40px;
+$spacer-xxxxl: 48px;
+$spacer-xxxxxl: 60px;
 
 /*
  * Typography

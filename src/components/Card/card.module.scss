@@ -5,8 +5,8 @@
   display: flex;
   justify-content: space-between;  
   border: solid 1px $gray-dark;
-  padding: $spacer-mobile-large;
-  margin-bottom: $spacer-mobile-large;
+  padding: $spacer-xl;
+  margin-bottom: $spacer-xl;
   background-color: white;
   flex-direction: column;
 
@@ -17,7 +17,7 @@
 
 .card-left {
   @include media-tablet {
-    padding-right: $spacer-tablet-large;    
+    padding-right: $spacer-xxl;    
   }  
 }
 

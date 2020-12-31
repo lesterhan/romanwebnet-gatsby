@@ -38,21 +38,21 @@ h2,
 .h2{
   font-size: $font-size-larger;
   font-weight: $font-bold;
-  margin-bottom: $spacer-mobile;
+  margin-bottom: $spacer-md;
 }
 
 h3,
 .h3{
   font-size: $font-size-large;
   font-weight: $font-normal;
-  margin-bottom: $spacer-mobile;
+  margin-bottom: $spacer-md;
 }
 
 h4,
 .h4{
   font-size: $font-size-base;
   font-weight: $font-bold;
-  margin-bottom: $spacer-mobile;
+  margin-bottom: $spacer-md;
 }
 
 h5,
@@ -79,7 +79,7 @@ ul {
 }
 
 p {
-  margin: 0 0 $spacer-mobile;
+  margin: 0 0 $spacer-md;
 }
 
 a {
@@ -112,19 +112,19 @@ a {
   h2,
   .h2{
     font-size: $font-size-tablet-larger;
-    margin-bottom: $spacer-tablet;
+    margin-bottom: $spacer-lg;
   }
 
   h3,
   .h3{
     font-size: $font-size-tablet-large;
-    margin-bottom: $spacer-tablet;
+    margin-bottom: $spacer-lg;
   }
 
   h4,
   .h4{
     font-size: $font-size-tablet-base;
-    margin-bottom: $spacer-tablet;
+    margin-bottom: $spacer-lg;
   }
 
   h5,

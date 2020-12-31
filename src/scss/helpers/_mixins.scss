@@ -32,8 +32,8 @@
   max-width: 100%;;
   margin-right: auto;
   margin-left: auto;
-  padding-left: $spacer-mobile-large;
-  padding-right: $spacer-mobile-large;
+  padding-left: $spacer-xl;
+  padding-right: $spacer-xl;
 
   @include media-tablet-small {
     max-width: $tablet-small-width;
@@ -41,8 +41,8 @@
   
   @include media-tablet {
     max-width: $tablet-width;
-    padding-left: $spacer-tablet-large;    
-    padding-right: $spacer-tablet-large;
+    padding-left: $spacer-xxl;    
+    padding-right: $spacer-xxl;
   }
   
   @include media-desktop {

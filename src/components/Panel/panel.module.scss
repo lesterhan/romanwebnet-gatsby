@@ -2,10 +2,10 @@
 @import "../../scss/helpers/mixins";
 
 .panel-heading {
-  padding-bottom: $spacer-mobile-large;
+  padding-bottom: $spacer-xl;
   border-bottom-style: solid;
   border-bottom-width: 1px;
-  margin: $spacer-mobile-huge 0 $spacer-mobile-large;
+  margin: $spacer-xxxl 0 $spacer-xl;
 
   &:first-child {
     margin-top: 0;
@@ -13,8 +13,8 @@
 
   @include media-tablet{
     .panel-heading{
-      padding-bottom: $spacer-tablet-large;
-      margin: $spacer-tablet-huge 0 $spacer-tablet-large;
+      padding-bottom: $spacer-xxl;
+      margin: $spacer-xxxxxl 0 $spacer-xxl;
     }
   }  
 }

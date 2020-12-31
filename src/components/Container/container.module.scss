@@ -4,11 +4,11 @@
 .root {
   @include container;
 
-  padding-top: $spacer-mobile-huge;
-  padding-bottom: $spacer-mobile-huge;
+  padding-top: $spacer-xxxl;
+  padding-bottom: $spacer-xxxl;
   
   @include media-tablet {
-    padding-top: $spacer-tablet-huge;
-    padding-bottom: $spacer-tablet-huge;
+    padding-top: $spacer-xxxxxl;
+    padding-bottom: $spacer-xxxxxl;
   }    
 }

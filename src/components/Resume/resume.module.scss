@@ -24,18 +24,18 @@
 }
 
 .skills-column {
-  margin-bottom: $spacer-mobile-large;
+  margin-bottom: $spacer-xl;
 }
 
 .experience {
 
   h5 {
-    margin-bottom: $spacer-mobile-large;
+    margin-bottom: $spacer-xl;
   }
 }
 
 .experience-item {
-  margin-bottom: $spacer-mobile-huge;
+  margin-bottom: $spacer-xxxl;
 
   &:last-child {
     margin-bottom: 0;
@@ -49,7 +49,7 @@
 
 .experience-item-left {
   @include media-tablet {
-    padding-right: $spacer-tablet-large;
+    padding-right: $spacer-xxl;
   }
 }
 
