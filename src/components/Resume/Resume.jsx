@@ -43,7 +43,7 @@ const Resume = () => {
         </p>
         <Heading element="h2" text="Skills"/>
         <div className={`${styles.skills}`}>
-          <div className={`${styles.column}`}>
+          <div className={`${styles.skillsColumn}`}>
             <h3 className="font-bold">Languages</h3>
             <ul>
               <li>JavaScript / ES5 / ES6</li>
