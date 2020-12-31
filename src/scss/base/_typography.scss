@@ -1,6 +1,6 @@
 body{
   font-family: $font-family-base;
-  font-size: $font-size-base;
+  font-size: $font-md;
   line-height: $line-height-base;
   color: $gray-dark;
 }
@@ -30,46 +30,46 @@ h6{
 
 h1,
 .h1{
-  font-size: $font-size-largest;
+  font-size: $font-xxxl;
   font-weight: $font-normal;
 }
 
 h2,
 .h2{
-  font-size: $font-size-larger;
+  font-size: $font-xxl;
   font-weight: $font-bold;
   margin-bottom: $spacer-md;
 }
 
 h3,
 .h3{
-  font-size: $font-size-large;
+  font-size: $font-lg;
   font-weight: $font-normal;
   margin-bottom: $spacer-md;
 }
 
 h4,
 .h4{
-  font-size: $font-size-base;
+  font-size: $font-md;
   font-weight: $font-bold;
   margin-bottom: $spacer-md;
 }
 
 h5,
 .h5{
-  font-size: $font-size-small;
+  font-size: $font-sm;
   font-weight: $font-normal;
 }
 
 h6,
 .h6{
-  font-size: $font-size-smaller;
+  font-size: $font-xs;
   font-weight: $font-normal;
 }
 
 pre {
   border: 1px solid $gray-light;
-  font-size: $font-size-small;
+  font-size: $font-sm;
 }
 
 ul {
@@ -106,29 +106,29 @@ a {
 @include media-tablet {
 
   body {
-    font-size: $font-size-tablet-base;
+    font-size: $font-lg;
   }
 
   h2,
   .h2{
-    font-size: $font-size-tablet-larger;
+    font-size: $font-xxl;
     margin-bottom: $spacer-lg;
   }
 
   h3,
   .h3{
-    font-size: $font-size-tablet-large;
+    font-size: $font-xl;
     margin-bottom: $spacer-lg;
   }
 
   h4,
   .h4{
-    font-size: $font-size-tablet-base;
+    font-size: $font-lg;
     margin-bottom: $spacer-lg;
   }
 
   h5,
   .h5{
-    font-size: $font-size-tablet-small;
+    font-size: $font-md;
   }
 }

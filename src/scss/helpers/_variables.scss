@@ -18,6 +18,7 @@ $page-background-color: #f7f5f0;
 /*
  * Settings
  */
+
 $transition-speed-fast: 100ms;
 $transition-speed-normal: 300ms;
 $transition-speed-slow: 500ms;
@@ -25,6 +26,7 @@ $transition-speed-slow: 500ms;
 /*
  * Containers
  */
+
 $tablet-small-width: 640px;
 $tablet-width: 768px;
 $desktop-width: 1024px;
@@ -32,6 +34,7 @@ $desktop-width: 1024px;
 /*
  * Spacers
  */
+
 $spacer-sm: 4px;
 $spacer-md: 8px;
 $spacer-lg: 16px;
@@ -56,19 +59,14 @@ $font-normal: 400;
 $font-medium: 500;
 $font-bold: 700;
 
-$font-size-smallest: 11px;
-$font-size-smaller: 13px;
-$font-size-small: 14px;
-$font-size-base: 16px;
-$font-size-large: 18px;
-$font-size-larger: 24px;
-$font-size-largest: 36px;
-
-$font-size-tablet-small: 16px;
-$font-size-tablet-base: 18px;
-$font-size-tablet-large: 20px;
-$font-size-tablet-larger: 26px;
-
+$font-xxs: 11px;
+$font-xs: 13px;
+$font-sm: 14px;
+$font-md: 16px;
+$font-lg: 18px;
+$font-xl: 20px;
+$font-xxl: 26px;
+$font-xxxl: 36px;
 
 $line-height-base: 1.75;
 $line-height-heading: 1.1;
