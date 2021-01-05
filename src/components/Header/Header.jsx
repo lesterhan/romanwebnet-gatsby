@@ -3,16 +3,6 @@ import styles from './header.module.scss';
 import Icon from '../Icon';
 import links from './links';
 
-const HeaderLink = ({ root, children }) => (
-  <a 
-    className={styles.link} 
-    rel="noopener noreferrer"
-    {...root}
-  >
-    {children}
-  </a>
-);
-
 const Header = ({ theme = 'default' }) => {
   const LogoTag = theme === 'home' ? 'h1' : 'h3';
   return (
@@ -25,17 +15,17 @@ const Header = ({ theme = 'default' }) => {
       <nav className={styles.nav}>
         {   
           links.map(({ root, icon }, key) => 
-            <HeaderLink root={root} key={key}>
+            <a 
+              className={styles.link} 
+              rel="noopener noreferrer"
+              key={key}
+              {...root}
+            >
               <Icon {...icon} />
-              {
-                theme === 'home' && (
-                  <>
-                    <span>{root.title}</span>
-                    <Icon className={styles.chevron} symbol="chevron" />              
-                  </>
-                )
-              }
-            </HeaderLink>
+              <span className={styles.label}>
+                {root.title}
+              </span>
+            </a>
           )
         }
       </nav>

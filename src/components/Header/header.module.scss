@@ -8,9 +8,13 @@ $transparent-black: rgba(0, 0, 0, .1);
   @include container;
 
   display: flex;  
+  justify-content: space-between;
+  margin-top: $spacer-lg;
+  margin-bottom: $spacer-lg;  
 }
 
 .link {
+  position: relative;
   border-radius: 5px;
   transition: all $transition-speed-normal ease-in-out;
   padding: $spacer-md;
@@ -23,16 +27,33 @@ $transparent-black: rgba(0, 0, 0, .1);
     background-color: $gray-dark;
     color: $white;
     text-decoration: none;
+
+    > span {
+      opacity: 1;
+    }
   } 
-}
 
-.chevron {
-  transform: scale(.75);
-
-  :not(:hover) & {    
-    color: $transparent-black;
+  > span {
+    position: absolute;
+    bottom: -1 * $spacer-lg;
+    right: 0;
+    left: 0;
+    transform: translateY(100%);
+    background-color: $gray-dark;
+    color: white;  
+    text-align: center;    
+    opacity: 0;
+    transition: opacity $transition-speed-normal ease-in-out;
   }
 }
+
+// .chevron {
+//   transform: scale(.75);
+
+//   :not(:hover) & {    
+//     color: $transparent-black;
+//   }
+// }
 
 .logo {
   flex-grow: 1;
@@ -46,49 +67,47 @@ $transparent-black: rgba(0, 0, 0, .1);
   margin-bottom: 0;
 }
 
-.default {
+// .default {
   
-  .nav {
-    justify-content: space-between;
-    margin-top: $spacer-lg;
-    margin-bottom: $spacer-lg;
-  }
-}
+// .nav {
 
-.home {
+// }
+// }
+
+// .home {
   
-  .nav {
-    flex-direction: column;
-    margin-top: $spacer-lg;
-    margin-bottom: $spacer-lg;
-  }
+//   .nav {
+//     flex-direction: column;
+//     margin-top: $spacer-lg;
+//     margin-bottom: $spacer-lg;
+//   }
 
-  .link {
-    display: flex;
-    align-items: center;  
-    font-size: $font-xxl;  
-    border: solid 1px $transparent-black;
-    margin-bottom: $spacer-lg;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    max-width: 700px;  
+//   .link {
+//     display: flex;
+//     align-items: center;  
+//     font-size: $font-xxl;  
+//     border: solid 1px $transparent-black;
+//     margin-bottom: $spacer-lg;
+//     margin-left: auto;
+//     margin-right: auto;
+//     width: 100%;
+//     max-width: 700px;  
 
-    &:last-child {
-      margin-bottom: 0;
-    }  
+//     &:last-child {
+//       margin-bottom: 0;
+//     }  
     
-    > svg:first-child {
-      margin-right: $spacer-xl;
-      min-width: 26px;
+//     > svg:first-child {
+//       margin-right: $spacer-xl;
+//       min-width: 26px;
       
-      @include media-tablet {
-        min-width: 64px;        
-      }      
-    }
+//       @include media-tablet {
+//         min-width: 64px;        
+//       }      
+//     }
   
-    > span {
-      flex: 1;
-    }    
-  }
-}
+//     > span {
+//       flex: 1;
+//     }    
+//   }
+// }

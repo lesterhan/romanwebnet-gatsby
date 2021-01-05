@@ -6,7 +6,7 @@ import Header from "../components/Header";
 const IndexPage = () => (
   <Layout 
     hasFooter={false}
-    renderHeader={() => <Header theme="home" />}
+    renderHeader={() => <Header />}
   >
     <SEO title="Home" />
     {/* 
