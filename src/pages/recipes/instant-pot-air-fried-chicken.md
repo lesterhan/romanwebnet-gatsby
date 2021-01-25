@@ -1,4 +1,3 @@
-
 ---
 title: "Instant Pot Air Fried Chicken"
 date: "2021-01-24"
