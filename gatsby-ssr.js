@@ -14,7 +14,7 @@
   pathname: '/404.html',
   pathPrefix: ''
 */
-exports.onPreRenderHTML = ({ getHeadComponents, replaceHeadComponents, replacePostBodyComponents }) => {
+exports.onPreRenderHTML = ({ getHeadComponents, replaceHeadComponents, getPostBodyComponents, replacePostBodyComponents }) => {
   /* Remove added tags */
   const headComponents = getHeadComponents()
     .filter((component) => {
@@ -28,5 +28,8 @@ exports.onPreRenderHTML = ({ getHeadComponents, replaceHeadComponents, replacePo
     })
 
   replaceHeadComponents(headComponents);
-  replacePostBodyComponents([]);
+//   replacePostBodyComponents(
+//     getPostBodyComponents()
+//       .filter(c => c.key === 'gatsby-plugin-google-gtag')
+//   );
 }
