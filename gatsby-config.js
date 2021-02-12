@@ -5,6 +5,18 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-ts`,
+      options: {
+        tsLoader: {
+          logLevel: `warn`,
+        },
+        forkTsCheckerPlugin: {
+          eslint: true,
+        },
+        codegen: false,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-yaml`,
     {
@@ -45,6 +57,6 @@ module.exports = {
     //       families: ['Lato:300', 'EB Garamond:600']
     //     }
     //   }
-    // },    
+    // },
   ],
 }
