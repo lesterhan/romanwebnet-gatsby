@@ -1,13 +1,13 @@
 export default [
-  { 
+  {
     root: {
       href: '/about',
       title: 'About',
     },
     icon: {
       symbol: 'about',
-    }     
-  },  
+    },
+  },
   {
     root: {
       href: 'https://github.com/groman00',
@@ -16,8 +16,8 @@ export default [
     },
     icon: {
       symbol: 'github',
-    }
-  },      
+    },
+  },
   {
     root: {
       href: 'https://www.linkedin.com/in/gregory-roman-8486485',
@@ -26,17 +26,17 @@ export default [
     },
     icon: {
       symbol: 'linkedin',
-    }
-  }, 
-  { 
+    },
+  },
+  {
     root: {
       href: '/recipes',
       title: 'Recipes',
     },
     icon: {
       symbol: 'recipes',
-    }    
-  }, 
+    },
+  },
   {
     root: {
       href: 'https://twitter.com/romanwebnet',
@@ -45,8 +45,8 @@ export default [
     },
     icon: {
       symbol: 'twitter',
-    }
-  }, 
+    },
+  },
   // {
   //   root: {
   //     href: 'mailto:gregorymichaelroman@gmail.com',
@@ -55,5 +55,5 @@ export default [
   //   icon: {
   //     symbol: 'email',
   //   }
-  // },     
+  // },
 ];

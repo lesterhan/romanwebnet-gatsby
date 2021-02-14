@@ -6,17 +6,17 @@ import Heading from '../Heading';
 import { Card, CardList } from '../Card';
 
 const Repos = () => {
-  const { 
-    allContentYaml: { 
+  const {
+    allContentYaml: {
       edges: [
-        { 
-          node: { items, title } 
-        }
-      ]
-    } 
+        {
+          node: { items, title },
+        },
+      ],
+    },
   } = useStaticQuery(graphql`
     query ReposQuery {
-      allContentYaml(filter: {contentId: {eq: "repos"}}) {
+      allContentYaml(filter: { contentId: { eq: "repos" } }) {
         edges {
           node {
             items {
@@ -34,25 +34,19 @@ const Repos = () => {
   return (
     <Panel theme="light">
       <Container>
-        <Heading element="h2" theme="dark" text={title}/>
+        <Heading element="h2" theme="dark" text={title} />
         <CardList>
-          {   
-            items.map(({
-              slug,
-              title,
-              description,
-              tags
-            }) => 
-              <Card
-                cta="View on Github"
-                description={description}
-                link={`https://github.com/groman00/${slug}`}
-                subtext={tags}
-                title={title}
-                external
-              />
-            )
-          }
+          {items.map(({ slug, title, description, tags }) => (
+            <Card
+              key={slug}
+              cta="View on Github"
+              description={description}
+              link={`https://github.com/groman00/${slug}`}
+              subtext={tags}
+              title={title}
+              external
+            />
+          ))}
         </CardList>
       </Container>
     </Panel>

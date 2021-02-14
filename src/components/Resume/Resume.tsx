@@ -1,22 +1,22 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import styles from './resume.module.scss';
-import Panel from "../Panel";
+import Panel from '../Panel';
 import Container from '../Container';
 import Heading from '../Heading';
 
 const Resume = () => {
-  const { 
-    allContentYaml: { 
+  const {
+    allContentYaml: {
       edges: [
-        { 
-          node: { items: resumeItems, title: resumeTitle } 
-        }
-      ]
-    } 
+        {
+          node: { items: resumeItems, title: resumeTitle },
+        },
+      ],
+    },
   } = useStaticQuery(graphql`
     query JobsQuery {
-      allContentYaml(filter: {contentId: {eq: "jobs"}}) {
+      allContentYaml(filter: { contentId: { eq: "jobs" } }) {
         edges {
           node {
             items {
@@ -31,17 +31,32 @@ const Resume = () => {
         }
       }
     }
-  `);  
+  `);
   return (
     <Panel theme="white">
       <Container>
-        <Heading element="h2" text="Background"/>
+        <Heading element="h2" text="Background" />
         <p className={styles.bio}>
-          Hello, my name is Greg Roman and I'm a software engineer based in Jersey City, NJ.  I have years of
-          experience building modern, high performing websites and applications for nationally recognized brands. If you are looking for a new website or app for your business, please 
-          contact me at <a title="Email" href="mailto:gregorymichaelroman@gmail.com">gregorymichaelroman@gmail.com</a> or follow me on Twitter <a href="https://twitter.com/romanwebnet" title="Twitter" target="_blank" rel="noopener noreferrer">@romanwebnet</a>.
+          Hello, my name is Greg Roman and I'm a software engineer based in
+          Jersey City, NJ. I have years of experience building modern, high
+          performing websites and applications for nationally recognized brands.
+          If you are looking for a new website or app for your business, please
+          contact me at{' '}
+          <a title="Email" href="mailto:gregorymichaelroman@gmail.com">
+            gregorymichaelroman@gmail.com
+          </a>{' '}
+          or follow me on Twitter{' '}
+          <a
+            href="https://twitter.com/romanwebnet"
+            title="Twitter"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            @romanwebnet
+          </a>
+          .
         </p>
-        <Heading element="h2" text="Skills"/>
+        <Heading element="h2" text="Skills" />
         <div className={`${styles.skills}`}>
           <div className={`${styles.skillsColumn}`}>
             <h3 className="font-bold">Languages</h3>
@@ -85,21 +100,20 @@ const Resume = () => {
             </ul>
           </div>
         </div>
-        <Heading element="h2" text={resumeTitle}/>      
-        <div className={styles.experience}>          
-          { resumeItems.map((item, key) => (
+        <Heading element="h2" text={resumeTitle} />
+        <div className={styles.experience}>
+          {resumeItems.map((item, key) => (
             <div className={styles.experienceItem} key={key}>
               <div className={styles.experienceItemLeft}>
                 <h4>{item.title}</h4>
-                <h5 className={styles.italic}>{item.company} - {item.location}</h5>
-                <p>
-                  {item.blurb}
-                </p>
+                <h5 className={styles.italic}>
+                  {item.company} - {item.location}
+                </h5>
+                <p>{item.blurb}</p>
               </div>
               <div className={styles.experienceItemRight}>{item.dateRange}</div>
             </div>
           ))}
-          
         </div>
       </Container>
     </Panel>

@@ -24,6 +24,7 @@
     "prettier/react"
   ],
   "rules": {
-    "react/require-default-props": 0
+    "react/require-default-props": 0,
+    "quotes": 1
   }
 }
