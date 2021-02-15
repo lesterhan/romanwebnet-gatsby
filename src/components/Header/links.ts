@@ -1,3 +1,8 @@
+export interface LinkItem {
+  root: Record<string, string>;
+  icon: Record<string, string>;
+}
+
 export default [
   {
     root: {

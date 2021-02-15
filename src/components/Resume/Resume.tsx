@@ -5,7 +5,7 @@ import Panel from '../Panel';
 import Container from '../Container';
 import Heading from '../Heading';
 
-const Resume = () => {
+const Resume: React.FC = () => {
   const {
     allContentYaml: {
       edges: [
@@ -37,7 +37,7 @@ const Resume = () => {
       <Container>
         <Heading element="h2" text="Background" />
         <p className={styles.bio}>
-          Hello, my name is Greg Roman and I'm a software engineer based in
+          Hello, my name is Greg Roman and I&#39;m a software engineer based in
           Jersey City, NJ. I have years of experience building modern, high
           performing websites and applications for nationally recognized brands.
           If you are looking for a new website or app for your business, please
@@ -102,18 +102,27 @@ const Resume = () => {
         </div>
         <Heading element="h2" text={resumeTitle} />
         <div className={styles.experience}>
-          {resumeItems.map((item, key) => (
-            <div className={styles.experienceItem} key={key}>
-              <div className={styles.experienceItemLeft}>
-                <h4>{item.title}</h4>
-                <h5 className={styles.italic}>
-                  {item.company} - {item.location}
-                </h5>
-                <p>{item.blurb}</p>
+          {resumeItems.map(
+            ({
+              id,
+              company,
+              title,
+              location,
+              blurb,
+              dateRange,
+            }: Record<string, string>) => (
+              <div className={styles.experienceItem} key={id}>
+                <div className={styles.experienceItemLeft}>
+                  <h4>{title}</h4>
+                  <h5 className={styles.italic}>
+                    {company} - {location}
+                  </h5>
+                  <p>{blurb}</p>
+                </div>
+                <div className={styles.experienceItemRight}>{dateRange}</div>
               </div>
-              <div className={styles.experienceItemRight}>{item.dateRange}</div>
-            </div>
-          ))}
+            )
+          )}
         </div>
       </Container>
     </Panel>

@@ -5,12 +5,12 @@ import Container from '../Container';
 import Heading from '../Heading';
 import { Card, CardList } from '../Card';
 
-const Repos = () => {
+const Repos: React.FC = () => {
   const {
     allContentYaml: {
       edges: [
         {
-          node: { items, title },
+          node: { items, title: pageTitle },
         },
       ],
     },
@@ -34,19 +34,21 @@ const Repos = () => {
   return (
     <Panel theme="light">
       <Container>
-        <Heading element="h2" theme="dark" text={title} />
+        <Heading element="h2" theme="dark" text={pageTitle} />
         <CardList>
-          {items.map(({ slug, title, description, tags }) => (
-            <Card
-              key={slug}
-              cta="View on Github"
-              description={description}
-              link={`https://github.com/groman00/${slug}`}
-              subtext={tags}
-              title={title}
-              external
-            />
-          ))}
+          {items.map(
+            ({ slug, title, description, tags }: Record<string, string>) => (
+              <Card
+                key={slug}
+                cta="View on Github"
+                description={description}
+                link={`https://github.com/groman00/${slug}`}
+                subtext={tags}
+                title={title}
+                external
+              />
+            )
+          )}
         </CardList>
       </Container>
     </Panel>

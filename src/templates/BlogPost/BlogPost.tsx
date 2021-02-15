@@ -5,7 +5,11 @@ import Container from '../../components/Container';
 import styles from './blogPost.module.scss';
 import SEO from '../../components/seo';
 
-const BreadCrumb = ({ title }) => (
+interface BreadCrumbProps {
+  title: string;
+}
+
+const BreadCrumb: React.FC<BreadCrumbProps> = ({ title }) => (
   <div className={styles.breadcrumb}>
     <a href="/recipes">Recipes</a>
     <span className={styles.breadcrumbSpacer}>{'>'}</span>
@@ -13,7 +17,17 @@ const BreadCrumb = ({ title }) => (
   </div>
 );
 
-const BlogPost = ({ data }) => {
+interface Post {
+  frontmatter: { title: string };
+  excerpt: string;
+  html: string;
+}
+
+interface BlogPostProps {
+  data: { markdownRemark: Post };
+}
+
+const BlogPost: React.FC<BlogPostProps> = ({ data }) => {
   const post = data.markdownRemark;
   const { title } = post.frontmatter;
   return (

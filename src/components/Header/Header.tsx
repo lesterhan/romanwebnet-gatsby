@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './header.module.scss';
 import Icon from '../Icon';
-import links from './links';
+import links, { Link } from './links';
 
 const HeaderLink = ({ root, children }) => (
   <a className={styles.link} rel="noopener noreferrer" {...root}>
@@ -9,7 +9,7 @@ const HeaderLink = ({ root, children }) => (
   </a>
 );
 
-const Header = ({ theme = 'default' }) => {
+const Header: React.FC<{ theme: string }> = ({ theme = 'default' }) => {
   const LogoTag = theme === 'home' ? 'h1' : 'h3';
   return (
     <header className={styles[theme]}>
@@ -21,8 +21,8 @@ const Header = ({ theme = 'default' }) => {
         </LogoTag>
       </div>
       <nav className={styles.nav}>
-        {links.map(({ root, icon }, key) => (
-          <HeaderLink root={root} key={key}>
+        {links.map(({ root, icon }: Record<string, {}>) => (
+          <HeaderLink root={root} key={icon}>
             <Icon {...icon} />
             {theme === 'home' && (
               <>

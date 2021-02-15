@@ -3,7 +3,7 @@ import Layout from '../../components/layout';
 import SEO from '../../components/seo';
 import Recipes from '../../components/Recipes';
 
-const RecipesPage = () => (
+const RecipesPage: React.FC = () => (
   <Layout>
     <SEO title="Recipes" />
     <Recipes />

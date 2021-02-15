@@ -1,9 +1,24 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-export default function HTML(props) {
+interface Props {
+  bodyAttributes: Record<string, string>;
+  htmlAttributes: Record<string, string>;
+  headComponents: Array<React.ReactNode>;
+  preBodyComponents: Array<React.ReactNode>;
+  postBodyComponents: Array<React.ReactNode>;
+  body: string;
+}
+
+const html: React.FC<Props> = ({
+  bodyAttributes,
+  htmlAttributes,
+  headComponents,
+  preBodyComponents,
+  postBodyComponents,
+  body,
+}) => {
   return (
-    <html {...props.htmlAttributes}>
+    <html {...htmlAttributes} lang="en">
       <head>
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
@@ -11,16 +26,16 @@ export default function HTML(props) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        {props.headComponents}
+        {headComponents}
       </head>
-      <body {...props.bodyAttributes}>
-        {props.preBodyComponents}
+      <body {...bodyAttributes}>
+        {preBodyComponents}
         <div
           key="body"
           id="___gatsby"
-          dangerouslySetInnerHTML={{ __html: props.body }}
+          dangerouslySetInnerHTML={{ __html: body }}
         />
-        {props.postBodyComponents}
+        {postBodyComponents}
         <div className="hide">
           <svg xmlns="http://www.w3.org/2000/svg">
             <symbol id="icon-github" viewBox="0 0 512 512">
@@ -73,13 +88,6 @@ export default function HTML(props) {
       </body>
     </html>
   );
-}
-
-HTML.propTypes = {
-  htmlAttributes: PropTypes.object,
-  headComponents: PropTypes.array,
-  bodyAttributes: PropTypes.object,
-  preBodyComponents: PropTypes.array,
-  body: PropTypes.string,
-  postBodyComponents: PropTypes.array,
 };
+
+export default html;

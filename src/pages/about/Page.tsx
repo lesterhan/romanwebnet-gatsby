@@ -1,10 +1,10 @@
-import React from "react"
-import Layout from "../../components/layout"
-import SEO from "../../components/seo"
-import Resume from "../../components/Resume";
-import Repos from "../../components/Repos";
+import React from 'react';
+import Layout from '../../components/layout';
+import SEO from '../../components/seo';
+import Resume from '../../components/Resume';
+import Repos from '../../components/Repos';
 
-const AboutPage = () => (
+const AboutPage: React.FC = () => (
   <Layout>
     <SEO title="Resume" />
     <Resume />
