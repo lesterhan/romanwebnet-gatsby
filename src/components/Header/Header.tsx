@@ -1,15 +1,29 @@
 import React from 'react';
 import styles from './header.module.scss';
 import Icon from '../Icon';
-import links, { Link } from './links';
+import links, { LinkItem } from './links';
 
-const HeaderLink = ({ root, children }) => (
+interface HeaderLinkProps {
+  link: LinkItem;
+  theme?: string;
+}
+
+const HeaderLink: React.FC<HeaderLinkProps> = ({
+  link: { root, icon },
+  theme,
+}) => (
   <a className={styles.link} rel="noopener noreferrer" {...root}>
-    {children}
+    <Icon {...icon} />
+    {theme === 'home' && (
+      <>
+        <span>{root.title}</span>
+        <Icon className={styles.chevron} symbol="chevron" />
+      </>
+    )}
   </a>
 );
 
-const Header: React.FC<{ theme: string }> = ({ theme = 'default' }) => {
+const Header: React.FC<{ theme?: string }> = ({ theme = 'default' }) => {
   const LogoTag = theme === 'home' ? 'h1' : 'h3';
   return (
     <header className={styles[theme]}>
@@ -21,16 +35,8 @@ const Header: React.FC<{ theme: string }> = ({ theme = 'default' }) => {
         </LogoTag>
       </div>
       <nav className={styles.nav}>
-        {links.map(({ root, icon }: Record<string, {}>) => (
-          <HeaderLink root={root} key={icon}>
-            <Icon {...icon} />
-            {theme === 'home' && (
-              <>
-                <span>{root.title}</span>
-                <Icon className={styles.chevron} symbol="chevron" />
-              </>
-            )}
-          </HeaderLink>
+        {links.map((link) => (
+          <HeaderLink key={link.icon.symbol} link={link} theme={theme} />
         ))}
       </nav>
     </header>

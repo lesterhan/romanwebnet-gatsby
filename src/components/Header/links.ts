@@ -1,6 +1,16 @@
+interface RootType {
+  href: string;
+  title: string;
+  target?: string | undefined;
+}
+
+interface IconType {
+  symbol: string;
+}
+
 export interface LinkItem {
-  root: Record<string, string>;
-  icon: Record<string, string>;
+  root: RootType;
+  icon: IconType;
 }
 
 export default [

@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './card.module.scss';
 
-const CardList = ({ children }) => (
+const CardList: React.FC = ({ children }) => (
   <div className={styles.cardList}>{children}</div>
 );
 

@@ -1,7 +1,22 @@
 import React from 'react';
 import styles from './card.module.scss';
 
-const Card = ({ cta, description, link, subtext, title, external = false }) => (
+interface Props {
+  cta: string;
+  description: string;
+  link: string;
+  subtext?: string;
+  title: string;
+  external?: boolean;
+}
+const Card: React.FC<Props> = ({
+  cta,
+  description,
+  link,
+  subtext,
+  title,
+  external = false,
+}) => (
   <div className={styles.card}>
     <div className={styles.cardLeft}>
       <h4 className="title">

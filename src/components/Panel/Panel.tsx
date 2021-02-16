@@ -1,14 +1,18 @@
 import React from 'react';
 
-const themes = {
-  none: 'bg-transparent',
-  white: 'bg-white',
-  light: 'bg-gray-lightest',
-  dark: 'bg-gray-darker',
-};
+enum Theme {
+  none = 'bg-transparent',
+  white = 'bg-white',
+  light = 'bg-gray-lightest',
+  dark = 'bg-gray-darker',
+}
 
-const Panel = ({ children, theme = 'none' }) => (
-  <section className={themes[theme]}>{children}</section>
+interface Props {
+  theme: keyof typeof Theme;
+}
+
+const Panel: React.FC<Props> = ({ children, theme = 'none' }) => (
+  <section className={Theme[theme]}>{children}</section>
 );
 
 export default Panel;

@@ -1,8 +1,13 @@
 import React from 'react';
 import styles from './icon.module.scss';
 
-const Icon: React.FC<{ symbol: string }> = ({ symbol, ...props }) => (
-  <svg className={`${styles.root} ${styles[symbol]} ${props.className}`}>
+interface Props {
+  symbol: string;
+  className?: string;
+}
+
+const Icon: React.FC<Props> = ({ className, symbol }) => (
+  <svg className={`${styles.root} ${styles[symbol]} ${className}`}>
     <use xlinkHref={`#icon-${symbol}`} />
   </svg>
 );

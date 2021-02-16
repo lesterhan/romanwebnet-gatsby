@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './businessCard.module.scss';
 import Icon from '../Icon';
 
-const BusinessCard = () => (
+const BusinessCard: React.FC = () => (
   <div className={styles.root}>
     <div className={styles.heading} />
     <h6 className={styles.contact}>Jersey City, NJ</h6>
