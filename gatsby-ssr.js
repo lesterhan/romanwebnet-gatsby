@@ -15,10 +15,24 @@
   pathPrefix: ''
 */
 exports.onPreRenderHTML = ({
-  // getHeadComponents,
-  // replaceHeadComponents,
+  getHeadComponents,
+  replaceHeadComponents,
   replacePostBodyComponents,
 }) => {
-  // Remove all added scripts
+  /* Remove added tags */
+  const headComponents = getHeadComponents().filter((component) => {
+    if (/^gatsby-plugin-manifest-apple-touch-icon/.test(component.key)) {
+      return true;
+    }
+    if (component.key === 'commons.css') {
+      return true;
+    }
+    if (['meta', 'style', 'title'].indexOf(component.type) > -1) {
+      return true;
+    }
+    return false;
+  });
+
+  replaceHeadComponents(headComponents);
   replacePostBodyComponents([]);
 };
