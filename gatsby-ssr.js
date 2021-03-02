@@ -4,7 +4,7 @@
  * See: https://www.gatsbyjs.org/docs/ssr-apis/
  */
 
-/* 
+/*
   getHeadComponents: [Function: getHeadComponents],
   replaceHeadComponents: [Function: replaceHeadComponents],
   getPreBodyComponents: [Function: getPreBodyComponents],
@@ -14,19 +14,11 @@
   pathname: '/404.html',
   pathPrefix: ''
 */
-exports.onPreRenderHTML = ({ getHeadComponents, replaceHeadComponents, replacePostBodyComponents }) => {
-  /* Remove added tags */
-  const headComponents = getHeadComponents()
-    .filter((component) => {
-      if (/^gatsby-plugin-manifest-apple-touch-icon/.test(component.key)) {
-        return true;
-      }
-      if(['meta', 'style', 'title'].indexOf(component.type) > -1) {
-        return true;
-      }
-      return false;
-    })
-
-  replaceHeadComponents(headComponents);
+exports.onPreRenderHTML = ({
+  // getHeadComponents,
+  // replaceHeadComponents,
+  replacePostBodyComponents,
+}) => {
+  // Remove all added scripts
   replacePostBodyComponents([]);
-}
+};

@@ -1,43 +1,43 @@
 contentId: jobs
 title: Experience
 items:
-  - 
+  - id: pton_sse
     title: Senior Software Engineer
     company: Peloton Interactive Inc
     location: New York, NY
     dateRange: 2020 - Current
     blurb:
-  - 
+  - id: abi_fstl
     title: Fullstack Tech Lead
     company: Anheuser-Busch InBev
     location: New York, NY
     dateRange: 2019 - 2020
     blurb: Tech lead for B2B applications.  Responsible for Brazil-based engineering teams building applications with React and Spring Boot microservices.
-  - 
+  - id: nwl_fetl
     title: Frontend Tech Lead
     company: Newell Brands
     location: Hoboken, NJ
     dateRange: 2018 - 2019
     blurb: Tech lead for CMS development team.  Responsible for a distributed team of frontend developers.
-  - 
+  - id: nwl_sdui
     title: Senior Developer, UI
     company: Newell Brands
     location: Hoboken, NJ
-    dateRange: "2018"
+    dateRange: '2018'
     blurb: Senior Developer for CMS development team. Contributed foundational code for custom Drupal platform.
-  - 
+  - id: aol_sse
     title: Senior Software Engineer
     company: AOL / Verizon Media
     location: New York, NY
     dateRange: 2014 - 2018
     blurb: Front-end engineer for AOL's research and development team.  Responsible for building various web applications for client and server, as well as native applications for Roku&reg;.
-  - 
+  - id: aol_se
     title: Software Engineer
     company: AOL
     location: Dulles, VA
     dateRange: 2011 - 2014
-    blurb: "Front-end engineer for AOL Money & Finance websites: Daily Finance, AOL Jobs and AOL Real Estate."
-  - 
+    blurb: 'Front-end engineer for AOL Money & Finance websites: Daily Finance, AOL Jobs and AOL Real Estate.'
+  - id: ls_sd
     title: Software Developer
     company: LS Advertising
     location: Mahwah, NJ

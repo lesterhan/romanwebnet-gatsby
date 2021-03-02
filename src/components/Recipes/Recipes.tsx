@@ -1,23 +1,32 @@
 import React from 'react';
-import { useStaticQuery } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 import Panel from '../Panel';
 import Container from '../Container';
 import Heading from '../Heading';
 import { Card, CardList } from '../Card';
 
-const Recipes = () => {
+interface NodeType {
+  id: string;
+  excerpt: string;
+  fields: {
+    slug: string;
+  };
+  frontmatter: {
+    title: string;
+  };
+}
+
+const Recipes: React.FC = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark(filter: {
-        frontmatter: {
-          categories: {
-            in: "Recipes"
-          },
-          status: {
-            eq: "published"
+      allMarkdownRemark(
+        filter: {
+          frontmatter: {
+            categories: { in: "Recipes" }
+            status: { eq: "published" }
           }
         }
-      }) {
+      ) {
         totalCount
         edges {
           node {
@@ -41,8 +50,8 @@ const Recipes = () => {
       <Container>
         <Heading element="h2" theme="dark" text="Recipes" />
         <CardList>
-          {   
-            data.allMarkdownRemark.edges.map(({ node }) => (
+          {data.allMarkdownRemark.edges.map(
+            ({ node }: Record<string, NodeType>) => (
               <Card
                 key={node.id}
                 cta="View Recipe"
@@ -51,7 +60,7 @@ const Recipes = () => {
                 title={node.frontmatter.title}
               />
             )
-            )}
+          )}
         </CardList>
       </Container>
     </Panel>

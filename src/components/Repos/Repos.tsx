@@ -5,18 +5,18 @@ import Container from '../Container';
 import Heading from '../Heading';
 import { Card, CardList } from '../Card';
 
-const Repos = () => {
-  const { 
-    allContentYaml: { 
+const Repos: React.FC = () => {
+  const {
+    allContentYaml: {
       edges: [
-        { 
-          node: { items, title } 
-        }
-      ]
-    } 
+        {
+          node: { items, title: pageTitle },
+        },
+      ],
+    },
   } = useStaticQuery(graphql`
     query ReposQuery {
-      allContentYaml(filter: {contentId: {eq: "repos"}}) {
+      allContentYaml(filter: { contentId: { eq: "repos" } }) {
         edges {
           node {
             items {
@@ -34,16 +34,12 @@ const Repos = () => {
   return (
     <Panel theme="light">
       <Container>
-        <Heading element="h2" theme="dark" text={title}/>
+        <Heading element="h2" theme="dark" text={pageTitle} />
         <CardList>
-          {   
-            items.map(({
-              slug,
-              title,
-              description,
-              tags
-            }) => 
+          {items.map(
+            ({ slug, title, description, tags }: Record<string, string>) => (
               <Card
+                key={slug}
                 cta="View on Github"
                 description={description}
                 link={`https://github.com/groman00/${slug}`}
@@ -52,7 +48,7 @@ const Repos = () => {
                 external
               />
             )
-          }
+          )}
         </CardList>
       </Container>
     </Panel>
