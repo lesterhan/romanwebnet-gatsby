@@ -6,18 +6,8 @@ module.exports = {
     author: '@gatsbyjs',
   },
   plugins: [
-    {
-      resolve: 'gatsby-plugin-ts',
-      options: {
-        tsLoader: {
-          logLevel: 'warn',
-        },
-        forkTsCheckerPlugin: {
-          eslint: true,
-        },
-        codegen: false,
-      },
-    },
+    'gatsby-plugin-sass',
+    'gatsby-plugin-typescript',
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-yaml',
     {
