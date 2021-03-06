@@ -8,21 +8,12 @@
 import React from 'react';
 // import { useStaticQuery, graphql } from "gatsby"
 
-import Header from './Header';
+import { Header } from './Header';
+import { HorizontalNavigation, VerticalNavigation } from './Navigation';
 import Footer from './Footer';
 import '../scss/main.scss';
 
-interface Props {
-  children: React.ReactNode;
-  renderHeader?: () => JSX.Element;
-  hasFooter?: boolean;
-}
-
-const Layout: React.FC<Props> = ({
-  children,
-  renderHeader = null,
-  hasFooter = true,
-}) => {
+const Layout: React.FC = ({ children }) => {
   // const data = useStaticQuery(graphql`
   //   query SiteTitleQuery {
   //     site {
@@ -32,14 +23,22 @@ const Layout: React.FC<Props> = ({
   //     }
   //   }
   // `)
-
-  return (
-    <>
-      {renderHeader ? renderHeader() : <Header />}
-      <main>{children}</main>
-      {hasFooter && <Footer />}
-    </>
-  );
+  return <>{children}</>;
 };
 
-export default Layout;
+export const DefaultLayout: React.FC = ({ children }) => (
+  <Layout>
+    <Header />
+    <main>{children}</main>
+    <HorizontalNavigation />
+    <Footer />
+  </Layout>
+);
+
+export const HomeLayout: React.FC = ({ children }) => (
+  <Layout>
+    <Header logoTag="h1" />
+    <VerticalNavigation />
+    <main>{children}</main>
+  </Layout>
+);

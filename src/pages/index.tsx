@@ -1,10 +1,9 @@
 import React from 'react';
-import Layout from '../components/layout';
+import { HomeLayout as Layout } from '../components/layout';
 import SEO from '../components/seo';
-import Header from '../components/Header';
 
 const IndexPage: React.FC = () => (
-  <Layout hasFooter={false} renderHeader={() => <Header theme="home" />}>
+  <Layout>
     <SEO title="Home" />
     {/*
     https://www.gatsbyjs.org/docs/adding-analytics/

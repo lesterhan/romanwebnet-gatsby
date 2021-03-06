@@ -1,37 +1,37 @@
-@import "../../scss/helpers/variables";
-@import "../../scss/helpers/mixins";
+@import '../../scss/helpers/variables';
+@import '../../scss/helpers/mixins';
 
 .root {
   height: 28px;
   width: 28px;
   vertical-align: middle;
-  
+
   @include media-tablet {
     height: 44px;
     width: 44px;
-  }  
+  }
 }
 
 .about {
   width: 32px;
 
   @include media-tablet {
-    width: 50px;  
-  }    
+    width: 50px;
+  }
 }
 
 .chevron {
   width: 18px;
 
   @include media-tablet {
-      width: 28px;
-  }     
+    width: 28px;
+  }
 }
 
 .recipes {
   width: 23px;
 
   @include media-tablet {
-      width: 36px;
-  }     
+    width: 36px;
+  }
 }

@@ -1,23 +1,23 @@
 contentId: repos
 title: Pinned Repositories
 items:
-  - 
-    slug: vue-pwa-starter
-    title: Vue PWA Starter
-    description: A simple boilerplate to start building progressive web apps with Vue js.
-    tags: Javascript, Vue, Progressive Web Apps, Webpack
-  -
-    slug: vue-music-box
+  - slug: romanwebnet-gatsby
+    title: Romanwebnet.com
+    description: Personal website built with Gatsby framework.
+    tags: Javascript, Gatsby, React
+  # - slug: vue-pwa-starter
+  #   title: Vue PWA Starter
+  #   description: A simple boilerplate to start building progressive web apps with Vue js.
+  #   tags: Javascript, Vue, Progressive Web Apps, Webpack
+  - slug: vue-music-box
     title: Vue Music Box
     description: A music box built with Laravel and Vue.js.
-    tags: Javascript, Vue, Laravel     
-  - 
-    slug: vue-keyboard
+    tags: Javascript, Vue, Laravel
+  - slug: vue-keyboard
     title: Vue Keyboard
     description: Virtual keyboard using Vue js and the Web Audio API.
     tags: Javascript, Vue, Web Audio API
-  -
-    slug: roku-remote
+  - slug: roku-remote
     title: Roku Remote
     description: A web version of the Roku® remote control.
     tags: Javascript, Node, Express, Socket.io

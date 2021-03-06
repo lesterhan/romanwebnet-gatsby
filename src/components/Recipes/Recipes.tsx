@@ -48,7 +48,7 @@ const Recipes: React.FC = () => {
   return (
     <Panel theme="light">
       <Container>
-        <Heading element="h2" theme="dark" text="Recipes" />
+        <Heading element="h1" theme="dark" text="Recipes" />
         <CardList>
           {data.allMarkdownRemark.edges.map(
             ({ node }: Record<string, NodeType>) => (

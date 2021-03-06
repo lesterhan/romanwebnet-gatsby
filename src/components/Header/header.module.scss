@@ -1,42 +1,9 @@
-@import "../../scss/helpers/variables";
-@import "../../scss/helpers/mixins";
-
-$tablet-height: 80px;
-$transparent-black: rgba(0, 0, 0, .1);
-
-.nav {
-  @include container;
-
-  display: flex;  
-}
-
-.link {
-  border-radius: 5px;
-  transition: all $transition-speed-normal ease-in-out;
-  padding: $spacer-md;
-
-  @include media-tablet {
-    padding: $spacer-lg;
-  }
-  
-  &:hover {
-    background-color: $gray-dark;
-    color: $white;
-    text-decoration: none;
-  } 
-}
-
-.chevron {
-  transform: scale(.75);
-
-  :not(:hover) & {    
-    color: $transparent-black;
-  }
-}
+@import '../../scss/helpers/variables';
+@import '../../scss/helpers/mixins';
 
 .logo {
   flex-grow: 1;
-  display: flex;           
+  display: flex;
   justify-content: center;
   background-color: $black;
   padding: $spacer-md 0;
@@ -44,51 +11,4 @@ $transparent-black: rgba(0, 0, 0, .1);
 
 .logo-text {
   margin-bottom: 0;
-}
-
-.default {
-  
-  .nav {
-    justify-content: space-between;
-    margin-top: $spacer-lg;
-    margin-bottom: $spacer-lg;
-  }
-}
-
-.home {
-  
-  .nav {
-    flex-direction: column;
-    margin-top: $spacer-lg;
-    margin-bottom: $spacer-lg;
-  }
-
-  .link {
-    display: flex;
-    align-items: center;  
-    font-size: $font-xxl;  
-    border: solid 1px $transparent-black;
-    margin-bottom: $spacer-lg;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    max-width: 700px;  
-
-    &:last-child {
-      margin-bottom: 0;
-    }  
-    
-    > svg:first-child {
-      margin-right: $spacer-xl;
-      min-width: 26px;
-      
-      @include media-tablet {
-        min-width: 64px;        
-      }      
-    }
-  
-    > span {
-      flex: 1;
-    }    
-  }
 }

@@ -35,7 +35,7 @@ const Resume: React.FC = () => {
   return (
     <Panel theme="white">
       <Container>
-        <Heading element="h2" text="Background" />
+        <Heading element="h1" text="About" />
         <p className={styles.bio}>
           Hello, my name is Greg Roman and I&#39;m a software engineer based in
           Jersey City, NJ. I have years of experience building modern, high

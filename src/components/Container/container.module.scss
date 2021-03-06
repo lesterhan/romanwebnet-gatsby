@@ -1,14 +1,9 @@
-@import "../../scss/helpers/variables";
-@import "../../scss/helpers/mixins";
+@import '../../scss/helpers/variables';
+@import '../../scss/helpers/mixins';
 
 .root {
   @include container;
 
   padding-top: $spacer-xxxl;
   padding-bottom: $spacer-xxxl;
-  
-  @include media-tablet {
-    padding-top: $spacer-xxxxxl;
-    padding-bottom: $spacer-xxxxxl;
-  }    
 }
