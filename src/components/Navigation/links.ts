@@ -54,12 +54,11 @@ export default [
   },
   {
     root: {
-      href: 'https://twitter.com/romanwebnet',
-      title: 'Twitter',
-      target: '_blank',
+      href: '/music',
+      title: 'Music',
     },
     icon: {
-      symbol: 'twitter',
+      symbol: 'music',
     },
   },
   // {

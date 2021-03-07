@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Children } from 'react';
 import styles from './card.module.scss';
 
 interface Props {
@@ -9,6 +9,11 @@ interface Props {
   title: string;
   external?: boolean;
 }
+
+export const CardWrapper: React.FC = ({ children }) => (
+  <div className={styles.card}>{children}</div>
+);
+
 const Card: React.FC<Props> = ({
   cta,
   description,
@@ -17,7 +22,7 @@ const Card: React.FC<Props> = ({
   title,
   external = false,
 }) => (
-  <div className={styles.card}>
+  <CardWrapper>
     <div className={styles.cardLeft}>
       <h4 className="title">
         {link ? (
@@ -47,7 +52,7 @@ const Card: React.FC<Props> = ({
         {cta}
       </a>
     </h5>
-  </div>
+  </CardWrapper>
 );
 
 export default Card;
