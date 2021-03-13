@@ -91,6 +91,29 @@ const html: React.FC<Props> = ({
             </symbol>
           </svg>
         </div>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              // Google Tag Manager.
+              (function (document){
+                var script = document.createElement('script');
+                script.src = 'https://www.googletagmanager.com/gtag/js?id=UA-112401659-1';
+                script.async = true;
+                document.body.appendChild(script);
+              })(document);
+
+              // Google Analytics
+              (function (window) {
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){
+                  dataLayer.push(arguments);
+                }
+                gtag('js', new Date());
+                gtag('config', 'UA-112401659-1');
+              })(window);
+            `,
+          }}
+        />
       </body>
     </html>
   );
