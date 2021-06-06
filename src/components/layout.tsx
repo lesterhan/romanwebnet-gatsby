@@ -23,7 +23,8 @@ const Layout: React.FC = ({ children }) => {
   //     }
   //   }
   // `)
-  return <>{children}</>;
+  return null;
+  // return <>{children}</>;
 };
 
 export const DefaultLayout: React.FC = ({ children }) => (

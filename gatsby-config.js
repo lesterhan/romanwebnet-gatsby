@@ -6,7 +6,20 @@ module.exports = {
     author: '@gatsbyjs',
   },
   plugins: [
-    'gatsby-plugin-sass',
+    {
+      resolve: 'gatsby-plugin-sass',
+      options: {
+        data: `
+          $font-bold: 'foo';
+          @import "${__dirname}/src/scsshelpers/variables';
+          @import "${__dirname}/src/scsshelpers/mixins';
+        `,
+        // indentedSyntax: true,
+        // sassOptions: {
+        //   includePaths: [`${__dirname}/src/scss`],
+        // },
+      },
+    },
     'gatsby-plugin-typescript',
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-yaml',
@@ -21,6 +34,22 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
         excerpt_separator: '<!-- excerpt end -->',
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-alias-imports',
+      options: {
+        alias: {
+          '@src': 'src',
+          '@scss': 'src/scss',
+          // '@components': 'src/components',
+          // '@layouts': 'src/layouts',
+          // '@pages': 'src/pages',
+          // '@sass': 'src/sass',
+          // '@templates': 'src/templates',
+          // '@posts': 'content/posts',
+        },
+        // extensions: [], // Omit extensions
       },
     },
     'gatsby-transformer-sharp',

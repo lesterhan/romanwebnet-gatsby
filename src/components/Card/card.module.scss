@@ -1,9 +1,6 @@
-@import "../../scss/helpers/variables";
-@import "../../scss/helpers/mixins";
-
 .card {
   display: flex;
-  justify-content: space-between;  
+  justify-content: space-between;
   border: solid 1px $gray-dark;
   padding: $spacer-xl;
   margin-bottom: $spacer-xl;
@@ -17,8 +14,8 @@
 
 .card-left {
   @include media-tablet {
-    padding-right: $spacer-xxl;    
-  }  
+    padding-right: $spacer-xxl;
+  }
 }
 
 .card-right {
@@ -28,7 +25,7 @@
 
   @include media-tablet {
     margin-top: 0;
-  }  
+  }
 }
 
 .cta {
@@ -41,8 +38,8 @@
 
 .description {
   margin-bottom: $spacer-lg;
-  
+
   @include media-tablet {
     margin-bottom: $spacer-xl;
-  }    
+  }
 }

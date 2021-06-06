@@ -1,6 +1,3 @@
-@import "../../scss/helpers/variables";
-@import "../../scss/helpers/mixins";
-
 .root {
   padding-bottom: $spacer-xl;
   border-bottom-style: solid;
@@ -10,8 +7,8 @@
   &:first-child {
     margin-top: 0;
   }
-  
-  @include media-tablet{
+
+  @include media-tablet {
     padding-bottom: $spacer-xxl;
     margin: $spacer-xxxxxl 0 $spacer-xxl;
   }

@@ -1,7 +1,3 @@
-@import "../../scss/helpers/variables";
-@import "../../scss/helpers/mixins";
-@import "../../scss/helpers/util";
-
 .bio {
   margin-bottom: 0;
 
@@ -20,7 +16,7 @@
   @include media-tablet {
     display: flex;
     justify-content: space-between;
-  }  
+  }
 }
 
 .skills-column {
@@ -28,7 +24,6 @@
 }
 
 .experience {
-
   h5 {
     margin-bottom: $spacer-xl;
   }
@@ -56,7 +51,7 @@
 .experience-item-right {
   font-style: italic;
   color: $gray-medium;
-  
+
   @include media-tablet {
     min-width: 20%;
     text-align: right;
