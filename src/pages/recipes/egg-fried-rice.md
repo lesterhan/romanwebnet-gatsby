@@ -7,15 +7,13 @@ status: "published"
 
 Deep Dive on Egg Fried Rice (蛋炒饭 dan chao fan)
 
-_by Lester Han, guest contributer_
-
 Egg fried rice is the measure of a Chinese home cook. When done well it is table-slappingly good. When it's done poorly I will still eat the whole dang thing doesn't matter. It's an easy and satisfying comfort food that goes with any meal of the day. 
 
-There are many variants of this dish, feel free to switch it up.
-
-I don't have precise measurements but here's a video of me making it and eating it: https://www.youtube.com/watch?v=jn2r8DQwCLI
-
 <!-- excerpt end -->
+
+_by Lester Han, guest contributer_
+
+There are many variants of this dish, feel free to switch it up. I don't have precise measurements but here's a video of me making it and eating it: https://www.youtube.com/watch?v=jn2r8DQwCLI
 
 ## Ingredients:
 * 1.5 - 2 cups of cooked, preferably overnight rice.
