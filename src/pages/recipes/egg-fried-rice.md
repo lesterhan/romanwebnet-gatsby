@@ -11,7 +11,7 @@ Egg Fried Rice (蛋炒饭 dan chao fan) is the measure of a Chinese home cook. W
 
 When it's done poorly I will still eat the whole dang thing doesn't matter. It's an easy and satisfying comfort food that goes with any meal of the day.
 
-There are many variants of this dish, feel free to switch it up. I don't have precise measurements but here's a video of me making it and eating it: https://www.youtube.com/watch?v=jn2r8DQwCLI
+There are many variants of this dish, feel free to switch it up. I don't have precise measurements but here's a <a href="https://www.youtube.com/watch?v=jn2r8DQwCLI" target="_blank">video</a> of me making it and eating it.
 
 _by Lester Han, guest contributer_
 
@@ -28,7 +28,7 @@ _by Lester Han, guest contributer_
   - japanese style nori rice seasoning
   - chili crisps (I use lao gan ma in the vid)
 
-## Steps to do the thing:
+## Steps:
 
 - Dice up the scallion and the sausage (or your substitutes)
 - Get some cooked white rice. I use about 1.5 - 2 cups? Rice need to be cold or room temp (old school home cooks use overnight rice)
